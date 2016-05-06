@@ -18,4 +18,9 @@ public class RestablecerNewActivity extends AppCompatActivity {
         Intent intent = new Intent(RestablecerNewActivity.this, UserLoginActivity.class);
         startActivity(intent);
     }
+    // Demo Run
+    public void onClickNext2(View view){
+        Intent intent = new Intent(RestablecerNewActivity.this, UserLoginActivity.class);
+        startActivity(intent);
+    }
 }

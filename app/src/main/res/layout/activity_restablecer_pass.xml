@@ -47,6 +47,7 @@
         android:id="@+id/button4"
         android:layout_centerHorizontal="true"
         android:onClick="onClickNext"
-        android:layout_below="@+id/editText" />
+        android:layout_below="@+id/editText"
+        android:background="@color/ELCColorClear" />
 
 </RelativeLayout>

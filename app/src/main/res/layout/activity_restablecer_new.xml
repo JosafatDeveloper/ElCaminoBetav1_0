@@ -37,7 +37,8 @@
         android:onClick="onClickNext"
         android:nestedScrollingEnabled="false"
         android:layout_below="@+id/editText5"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/ELCColorClear" />
 
     <EditText
         android:layout_width="280dp"

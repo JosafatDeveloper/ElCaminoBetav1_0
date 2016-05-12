@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.onlinesellers.elcaminobeta10.RegistroNuevoS2Activity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linearLayout"
+        android:background="@color/ELCColorBlak">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/app_logo_full" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Contrato uso"
+            android:id="@+id/textView5"
+            android:textSize="25dp"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="110dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque, purus a tincidunt maximus, risus mi euismod massa, et luctus turpis quam nec nisi. Aliquam pretium viverra vestibulum. Suspendisse consectetur iaculis lorem, vitae fermentum dui elementum vitae. Phasellus eu eros ac nulla mollis feugiat. Nam porta in ex ut egestas. Nulla vel lacus vitae felis rhoncus porta. Quisque hendrerit aliquam faucibus. Vestibulum semper ullamcorper tellus sed porta. Donec nec dui a nisl luctus bibendum. Integer convallis vel libero sit amet tristique. Curabitur consequat, ipsum vel iaculis rutrum, eros velit fringilla nibh, at tristique lorem elit sit amet elit. Donec vitae tellus lobortis, dictum enim a, euismod orci. Aenean lacinia mauris sit amet risus tempor, eget rutrum velit iaculis. Nullam a venenatis augue.  Etiam sollicitudin sed libero id pharetra. Mauris in cursus purus. Etiam quam velit, molestie nec varius id, blandit et velit. Fusce aliquam lacinia dolor, vitae tempor purus venenatis ac. Phasellus vitae tellus facilisis, aliquam libero at, malesuada erat. Sed et augue porttitor, sollicitudin eros eget, pretium nibh. In vel nibh consectetur, rhoncus enim ac, lacinia arcu. Fusce dignissim magna eu tellus faucibus, at lacinia orci feugiat.  Morbi nunc erat, vehicula sit amet sodales ut, egestas in mauris. Proin accumsan odio et ullamcorper ullamcorper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetur tellus vitae massa vulputate, in blandit neque auctor. Maecenas sagittis, odio quis elementum venenatis, tellus felis finibus eros, eu cursus sapien metus vel ligula. Fusce gravida metus ac eros pellentesque tincidunt. Donec malesuada nisl tortor. In sagittis velit eu lectus vehicula faucibus. In sit amet metus a mi condimentum sagittis eget nec ipsum. Donec malesuada est felis, vitae ultricies quam molestie in. Suspendisse placerat malesuada odio eu ultrices.  Nunc dapibus pharetra tristique. Duis porttitor lacus purus, ut luctus ligula imperdiet in. Pellentesque sagittis venenatis leo, et ultricies nunc vehicula quis. Nulla facilisi. Fusce dolor felis, dignissim ut massa eget, fringilla iaculis diam. Cras luctus augue mi, non vehicula lectus vulputate quis. Cras dapibus felis ac sollicitudin lacinia. Cras dapibus sapien nec porta varius. Ut eu dictum massa. Etiam vestibulum tincidunt ultrices. Sed rutrum placerat ullamcorper. Phasellus congue commodo felis non tincidunt. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vulputate turpis ut dolor semper, eget iaculis eros maximus. Nulla auctor viverra ex.  In semper erat nibh, ut laoreet felis tincidunt quis. Phasellus aliquam neque ac eros tristique, id efficitur enim finibus. Cras accumsan volutpat velit, ut imperdiet justo sodales vel. Vivamus ornare condimentum velit, quis rutrum turpis molestie vel. Ut laoreet libero at justo porta, eu cursus est hendrerit. Morbi sodales lobortis ultricies. Mauris finibus accumsan dolor. Nulla volutpat augue et enim finibus, ut aliquet risus sagittis."
+                android:id="@+id/textView2"
+                android:layout_alignTop="@+id/scrollView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/button5"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/ELCColorClear"
+        android:onClick="onClickNext"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepto terminos y condiciones"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

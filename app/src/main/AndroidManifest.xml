@@ -18,7 +18,17 @@
         <activity android:name=".UserLoginActivity" />
         <activity android:name=".PresentacionActivity" />
         <activity android:name=".RestablecerPassActivity" />
-        <activity android:name=".RestablecerNewActivity"></activity>
+        <activity android:name=".RestablecerNewActivity" />
+        <activity android:name=".RegistroNuevoS1Activity" />
+        <activity android:name=".RegistroNuevoS2Activity" />
+        <activity android:name=".RegistroNuevoS3Activity" />
+        <activity android:name=".RegistroNuevoS4Activity" />
+        <activity android:name=".RegistroNuevoS5Activity" />
+        <activity android:name=".RegistroNuevoS6Activity" />
+        <activity android:name=".RegistroNuevoS7Activity" />
+        <activity android:name=".RegistroNuevoS8Activity" />
+        <activity android:name=".RegistroNuevoS9Activity" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>

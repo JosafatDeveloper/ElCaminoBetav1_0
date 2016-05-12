@@ -5,21 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class PresentacionActivity extends AppCompatActivity {
+public class RegistroNuevoS9Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_presentacion);
+        setContentView(R.layout.activity_registro_nuevo_s9);
     }
 
     // Demo Run
     public void onClickNext(View view){
-        Intent intent = new Intent(PresentacionActivity.this, UserLoginActivity.class);
-        startActivity(intent);
-    }
-    public void onClickNext2(View view){
-        Intent intent = new Intent(PresentacionActivity.this, RegistroNuevoS1Activity.class);
+        Intent intent = new Intent(RegistroNuevoS9Activity.this, UserLoginActivity.class);
         startActivity(intent);
     }
 }

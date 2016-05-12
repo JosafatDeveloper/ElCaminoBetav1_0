@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">El Camino Beta 1.0</string>
+    <string name="registro">Registro</string>
+    <string name="apodo">Apodo</string>
 </resources>

@@ -35,7 +35,8 @@
         android:id="@+id/button"
         android:onClick="onClickNext"
         android:layout_below="@+id/main_image_logo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/ELCColorClear" />
 
     <Button
         android:layout_width="wrap_content"
@@ -44,5 +45,6 @@
         android:id="@+id/button2"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickNext2" />
+        android:onClick="onClickNext2"
+        android:background="@color/ELCColorClear" />
 </RelativeLayout>

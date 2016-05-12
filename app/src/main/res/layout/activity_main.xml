@@ -38,5 +38,6 @@
         android:id="@+id/button"
         android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickNext" />
+        android:onClick="onClickNext"
+        android:background="@color/ELCColorClear" />
 </RelativeLayout>

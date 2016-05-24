@@ -14,7 +14,7 @@ public class UserLoginActivity extends AppCompatActivity {
     }
     // Demo Run
     public void onClickNext(View view){
-        Intent intent = new Intent(UserLoginActivity.this, UserLoginActivity.class);
+        Intent intent = new Intent(UserLoginActivity.this, HomeActivity.class);
         startActivity(intent);
     }
     public void onClickNext2(View view){

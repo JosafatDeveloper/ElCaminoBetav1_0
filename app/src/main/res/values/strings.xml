@@ -2,4 +2,1490 @@
     <string name="app_name">El Camino Beta 1.0</string>
     <string name="registro">Registro</string>
     <string name="apodo">Apodo</string>
+
+    <!-- Font Manager El Camino Icon -->
+    <string name="ELCIcon_logotipo">&#xf001;</string>
+    <string name="ELCIcon_usercircle">&#xf002;</string>
+    <string name="ELCIcon_routeab">&#xf003;</string>
+    <string name="ELCIcon_toolfix">&#xf004;</string>
+    <string name="ELCIcon_cog">&#xf005;</string>
+    <string name="ELCIcon_comments">&#xf006;</string>
+    <string name="ELCIcon_search">&#xf007;</string>
+    <string name="ELCIcon_ambulancestandar">&#xf008;</string>
+    <string name="ELCIcon_locationarrow">&#xf009;</string>
+    <string name="ELCIcon_helmet">&#xf010;</string>
+    <string name="ELCIcon_cartshop">&#xf011;</string>
+    <string name="ELCIcon_crane">&#xf012;</string>
+    <string name="ELCIcon_infocircle">&#xf013;</string>
+    <string name="ELCIcon_stopcircle">&#xf014;</string>
+    <string name="ELCIcon_playcircle">&#xf015;</string>
+    <string name="ELCIcon_pausecircle">&#xf016;</string>
+    <string name="ELCIcon_margencirculo">&#xf017;</string>
+    <string name="ELCIcon_margeninter">&#xf018;</string>
+    <string name="ELCIcon_margen">&#xf019;</string>
+    <string name="ELCIcon_telephonecircle">&#xf020;</string>
+
+    <!-- Font Manager String Icon -->
+    <!-- Copy to use 500px -->
+    <string name="ELCFont_fa_500px">&#xf26e;</string>
+    <!-- Copy to use adjust -->
+    <string name="ELCFont_fa_adjust">&#xf042;</string>
+    <!-- Copy to use adn -->
+    <string name="ELCFont_fa_adn">&#xf170;</string>
+    <!-- Copy to use align_center -->
+    <string name="center_ELCFont_fa_align">&#xf037;</string>
+    <!-- Copy to use align_justify -->
+    <string name="justify_ELCFont_fa_align">&#xf039;</string>
+    <!-- Copy to use align_left -->
+    <string name="left_ELCFont_fa_align">&#xf036;</string>
+    <!-- Copy to use align_right -->
+    <string name="right_ELCFont_fa_align">&#xf038;</string>
+    <!-- Copy to use amazon -->
+    <string name="ELCFont_fa_amazon">&#xf270;</string>
+    <!-- Copy to use ambulance -->
+    <string name="ELCFont_fa_ambulance">&#xf0f9;</string>
+    <!-- Copy to use american_sign_language_interpreting -->
+    <string name="language_interpreting_ELCFont_fa_american_sign">&#xf2a3;</string>
+    <!-- Copy to use anchor -->
+    <string name="ELCFont_fa_anchor">&#xf13d;</string>
+    <!-- Copy to use android -->
+    <string name="ELCFont_fa_android">&#xf17b;</string>
+    <!-- Copy to use angellist -->
+    <string name="ELCFont_fa_angellist">&#xf209;</string>
+    <!-- Copy to use angle_double_down -->
+    <string name="ELCFont_fa_angle_double_down">&#xf103;</string>
+    <!-- Copy to use angle_double_left -->
+    <string name="left_ELCFont_fa_angle_double">&#xf100;</string>
+    <!-- Copy to use angle_double_right -->
+    <string name="double_right_ELCFont_fa_angle">&#xf101;</string>
+    <!-- Copy to use angle_double_up -->
+    <string name="double_up_ELCFont_fa_angle">&#xf102;</string>
+    <!-- Copy to use angle_down -->
+    <string name="down_ELCFont_fa_angle">&#xf107;</string>
+    <!-- Copy to use angle_left -->
+    <string name="ELCFont_fa_angle_left">&#xf104;</string>
+    <!-- Copy to use angle_right -->
+    <string name="right_ELCFont_fa_angle">&#xf105;</string>
+    <!-- Copy to use angle_up -->
+    <string name="up_ELCFont_fa_angle">&#xf106;</string>
+    <!-- Copy to use apple -->
+    <string name="ELCFont_fa_apple">&#xf179;</string>
+    <!-- Copy to use archive -->
+    <string name="ELCFont_fa_archive">&#xf187;</string>
+    <!-- Copy to use area_chart -->
+    <string name="chart_ELCFont_fa_area">&#xf1fe;</string>
+    <!-- Copy to use arrow_circle_down -->
+    <string name="circle_down_ELCFont_fa_arrow">&#xf0ab;</string>
+    <!-- Copy to use arrow_circle_left -->
+    <string name="circle_left_ELCFont_fa_arrow">&#xf0a8;</string>
+    <!-- Copy to use arrow_circle_o_down -->
+    <string name="ELCFont_fa_arrow_circle_o_down">&#xf01a;</string>
+    <!-- Copy to use arrow_circle_o_left -->
+    <string name="ELCFont_fa_arrow_circle_o_left">&#xf190;</string>
+    <!-- Copy to use arrow_circle_o_right -->
+    <string name="ELCFont_fa_arrow_circle_o_right">&#xf18e;</string>
+    <!-- Copy to use arrow_circle_o_up -->
+    <string name="ELCFont_fa_arrow_circle_o_up">&#xf01b;</string>
+    <!-- Copy to use arrow_circle_right -->
+    <string name="ELCFont_fa_arrow_circle_right">&#xf0a9;</string>
+    <!-- Copy to use arrow_circle_up -->
+    <string name="ELCFont_fa_arrow_circle_up">&#xf0aa;</string>
+    <!-- Copy to use arrow_down -->
+    <string name="ELCFont_fa_arrow_down">&#xf063;</string>
+    <!-- Copy to use arrow_left -->
+    <string name="ELCFont_fa_arrow_left">&#xf060;</string>
+    <!-- Copy to use arrow_right -->
+    <string name="ELCFont_fa_arrow_right">&#xf061;</string>
+    <!-- Copy to use arrow_up -->
+    <string name="ELCFont_fa_arrow_up">&#xf062;</string>
+    <!-- Copy to use arrows -->
+    <string name="ELCFont_fa_arrows">&#xf047;</string>
+    <!-- Copy to use arrows_alt -->
+    <string name="ELCFont_fa_arrows_alt">&#xf0b2;</string>
+    <!-- Copy to use arrows_h -->
+    <string name="ELCFont_fa_arrows_h">&#xf07e;</string>
+    <!-- Copy to use arrows_v -->
+    <string name="ELCFont_fa_arrows_v">&#xf07d;</string>
+    <!-- Copy to use asl_interpreting -->
+    <string name="ELCFont_fa_asl_interpreting">&#xf2a3;</string>
+    <!-- Copy to use assistive_listening_systems -->
+    <string name="ELCFont_fa_assistive_listening_systems">&#xf2a2;</string>
+    <!-- Copy to use asterisk -->
+    <string name="ELCFont_fa_asterisk">&#xf069;</string>
+    <!-- Copy to use at -->
+    <string name="ELCFont_fa_at">&#xf1fa;</string>
+    <!-- Copy to use audio_description -->
+    <string name="ELCFont_fa_audio_description">&#xf29e;</string>
+    <!-- Copy to use automobile -->
+    <string name="ELCFont_fa_automobile">&#xf1b9;</string>
+    <!-- Copy to use backward -->
+    <string name="ELCFont_fa_backward">&#xf04a;</string>
+    <!-- Copy to use balance_scale -->
+    <string name="ELCFont_fa_balance_scale">&#xf24e;</string>
+    <!-- Copy to use ban -->
+    <string name="ELCFont_fa_ban">&#xf05e;</string>
+    <!-- Copy to use bank -->
+    <string name="ELCFont_fa_bank">&#xf19c;</string>
+    <!-- Copy to use bar_chart -->
+    <string name="ELCFont_fa_bar_chart">&#xf080;</string>
+    <!-- Copy to use bar_chart_o -->
+    <string name="ELCFont_fa_bar_chart_o">&#xf080;</string>
+    <!-- Copy to use barcode -->
+    <string name="ELCFont_fa_barcode">&#xf02a;</string>
+    <!-- Copy to use bars -->
+    <string name="ELCFont_fa_bars">&#xf0c9;</string>
+    <!-- Copy to use battery_0 -->
+    <string name="ELCFont_fa_battery_0">&#xf244;</string>
+    <!-- Copy to use battery_1 -->
+    <string name="ELCFont_fa_battery_1">&#xf243;</string>
+    <!-- Copy to use battery_2 -->
+    <string name="ELCFont_fa_battery_2">&#xf242;</string>
+    <!-- Copy to use battery_3 -->
+    <string name="ELCFont_fa_battery_3">&#xf241;</string>
+    <!-- Copy to use battery_4 -->
+    <string name="ELCFont_fa_battery_4">&#xf240;</string>
+    <!-- Copy to use battery_empty -->
+    <string name="ELCFont_fa_battery_empty">&#xf244;</string>
+    <!-- Copy to use battery_full -->
+    <string name="ELCFont_fa_battery_full">&#xf240;</string>
+    <!-- Copy to use battery_half -->
+    <string name="ELCFont_fa_battery_half">&#xf242;</string>
+    <!-- Copy to use battery_quarter -->
+    <string name="ELCFont_fa_battery_quarter">&#xf243;</string>
+    <!-- Copy to use battery_three_quarters -->
+    <string name="ELCFont_fa_battery_three_quarters">&#xf241;</string>
+    <!-- Copy to use bed -->
+    <string name="ELCFont_fa_bed">&#xf236;</string>
+    <!-- Copy to use beer -->
+    <string name="ELCFont_fa_beer">&#xf0fc;</string>
+    <!-- Copy to use behance -->
+    <string name="ELCFont_fa_behance">&#xf1b4;</string>
+    <!-- Copy to use behance_square -->
+    <string name="ELCFont_fa_behance_square">&#xf1b5;</string>
+    <!-- Copy to use bell -->
+    <string name="ELCFont_fa_bell">&#xf0f3;</string>
+    <!-- Copy to use bell_o -->
+    <string name="ELCFont_fa_bell_o">&#xf0a2;</string>
+    <!-- Copy to use bell_slash -->
+    <string name="ELCFont_fa_bell_slash">&#xf1f6;</string>
+    <!-- Copy to use bell_slash_o -->
+    <string name="ELCFont_fa_bell_slash_o">&#xf1f7;</string>
+    <!-- Copy to use bicycle -->
+    <string name="ELCFont_fa_bicycle">&#xf206;</string>
+    <!-- Copy to use binoculars -->
+    <string name="ELCFont_fa_binoculars">&#xf1e5;</string>
+    <!-- Copy to use birthday_cake -->
+    <string name="ELCFont_fa_birthday_cake">&#xf1fd;</string>
+    <!-- Copy to use bitbucket -->
+    <string name="ELCFont_fa_bitbucket">&#xf171;</string>
+    <!-- Copy to use bitbucket_square -->
+    <string name="ELCFont_fa_bitbucket_square">&#xf172;</string>
+    <!-- Copy to use bitcoin -->
+    <string name="ELCFont_fa_bitcoin">&#xf15a;</string>
+    <!-- Copy to use black_tie -->
+    <string name="ELCFont_fa_black_tie">&#xf27e;</string>
+    <!-- Copy to use blind -->
+    <string name="ELCFont_fa_blind">&#xf29d;</string>
+    <!-- Copy to use bluetooth -->
+    <string name="ELCFont_fa_bluetooth">&#xf293;</string>
+    <!-- Copy to use bluetooth_b -->
+    <string name="ELCFont_fa_bluetooth_b">&#xf294;</string>
+    <!-- Copy to use bold -->
+    <string name="ELCFont_fa_bold">&#xf032;</string>
+    <!-- Copy to use bolt -->
+    <string name="ELCFont_fa_bolt">&#xf0e7;</string>
+    <!-- Copy to use bomb -->
+    <string name="ELCFont_fa_bomb">&#xf1e2;</string>
+    <!-- Copy to use book -->
+    <string name="ELCFont_fa_book">&#xf02d;</string>
+    <!-- Copy to use bookmark -->
+    <string name="ELCFont_fa_bookmark">&#xf02e;</string>
+    <!-- Copy to use bookmark_o -->
+    <string name="ELCFont_fa_bookmark_o">&#xf097;</string>
+    <!-- Copy to use braille -->
+    <string name="ELCFont_fa_braille">&#xf2a1;</string>
+    <!-- Copy to use briefcase -->
+    <string name="ELCFont_fa_briefcase">&#xf0b1;</string>
+    <!-- Copy to use btc -->
+    <string name="ELCFont_fa_btc">&#xf15a;</string>
+    <!-- Copy to use bug -->
+    <string name="ELCFont_fa_bug">&#xf188;</string>
+    <!-- Copy to use building -->
+    <string name="ELCFont_fa_building">&#xf1ad;</string>
+    <!-- Copy to use building_o -->
+    <string name="ELCFont_fa_building_o">&#xf0f7;</string>
+    <!-- Copy to use bullhorn -->
+    <string name="ELCFont_fa_bullhorn">&#xf0a1;</string>
+    <!-- Copy to use bullseye -->
+    <string name="ELCFont_fa_bullseye">&#xf140;</string>
+    <!-- Copy to use bus -->
+    <string name="ELCFont_fa_bus">&#xf207;</string>
+    <!-- Copy to use buysellads -->
+    <string name="ELCFont_fa_buysellads">&#xf20d;</string>
+    <!-- Copy to use cab -->
+    <string name="ELCFont_fa_cab">&#xf1ba;</string>
+    <!-- Copy to use calculator -->
+    <string name="ELCFont_fa_calculator">&#xf1ec;</string>
+    <!-- Copy to use calendar -->
+    <string name="ELCFont_fa_calendar">&#xf073;</string>
+    <!-- Copy to use calendar_check_o -->
+    <string name="ELCFont_fa_calendar_check_o">&#xf274;</string>
+    <!-- Copy to use calendar_minus_o -->
+    <string name="ELCFont_fa_calendar_minus_o">&#xf272;</string>
+    <!-- Copy to use calendar_o -->
+    <string name="ELCFont_fa_calendar_o">&#xf133;</string>
+    <!-- Copy to use calendar_plus_o -->
+    <string name="ELCFont_fa_calendar_plus_o">&#xf271;</string>
+    <!-- Copy to use calendar_times_o -->
+    <string name="ELCFont_fa_calendar_times_o">&#xf273;</string>
+    <!-- Copy to use camera -->
+    <string name="ELCFont_fa_camera">&#xf030;</string>
+    <!-- Copy to use camera_retro -->
+    <string name="ELCFont_fa_camera_retro">&#xf083;</string>
+    <!-- Copy to use car -->
+    <string name="ELCFont_fa_car">&#xf1b9;</string>
+    <!-- Copy to use caret_down -->
+    <string name="ELCFont_fa_caret_down">&#xf0d7;</string>
+    <!-- Copy to use caret_left -->
+    <string name="ELCFont_fa_caret_left">&#xf0d9;</string>
+    <!-- Copy to use caret_right -->
+    <string name="ELCFont_fa_caret_right">&#xf0da;</string>
+    <!-- Copy to use caret_square_o_down -->
+    <string name="ELCFont_fa_caret_square_o_down">&#xf150;</string>
+    <!-- Copy to use caret_square_o_left -->
+    <string name="ELCFont_fa_caret_square_o_left">&#xf191;</string>
+    <!-- Copy to use caret_square_o_right -->
+    <string name="ELCFont_fa_caret_square_o_right">&#xf152;</string>
+    <!-- Copy to use caret_square_o_up -->
+    <string name="ELCFont_fa_caret_square_o_up">&#xf151;</string>
+    <!-- Copy to use caret_up -->
+    <string name="ELCFont_fa_caret_up">&#xf0d8;</string>
+    <!-- Copy to use cart_arrow_down -->
+    <string name="ELCFont_fa_cart_arrow_down">&#xf218;</string>
+    <!-- Copy to use cart_plus -->
+    <string name="ELCFont_fa_cart_plus">&#xf217;</string>
+    <!-- Copy to use cc -->
+    <string name="ELCFont_fa_cc">&#xf20a;</string>
+    <!-- Copy to use cc_amex -->
+    <string name="ELCFont_fa_cc_amex">&#xf1f3;</string>
+    <!-- Copy to use cc_diners_club -->
+    <string name="ELCFont_fa_cc_diners_club">&#xf24c;</string>
+    <!-- Copy to use cc_discover -->
+    <string name="ELCFont_fa_cc_discover">&#xf1f2;</string>
+    <!-- Copy to use cc_jcb -->
+    <string name="ELCFont_fa_cc_jcb">&#xf24b;</string>
+    <!-- Copy to use cc_mastercard -->
+    <string name="ELCFont_fa_cc_mastercard">&#xf1f1;</string>
+    <!-- Copy to use cc_paypal -->
+    <string name="ELCFont_fa_cc_paypal">&#xf1f4;</string>
+    <!-- Copy to use cc_stripe -->
+    <string name="ELCFont_fa_cc_stripe">&#xf1f5;</string>
+    <!-- Copy to use cc_visa -->
+    <string name="ELCFont_fa_cc_visa">&#xf1f0;</string>
+    <!-- Copy to use certificate -->
+    <string name="ELCFont_fa_certificate">&#xf0a3;</string>
+    <!-- Copy to use chain -->
+    <string name="ELCFont_fa_chain">&#xf0c1;</string>
+    <!-- Copy to use chain_broken -->
+    <string name="ELCFont_fa_chain_broken">&#xf127;</string>
+    <!-- Copy to use check -->
+    <string name="ELCFont_fa_check">&#xf00c;</string>
+    <!-- Copy to use check_circle -->
+    <string name="ELCFont_fa_check_circle">&#xf058;</string>
+    <!-- Copy to use check_circle_o -->
+    <string name="ELCFont_fa_check_circle_o">&#xf05d;</string>
+    <!-- Copy to use check_square -->
+    <string name="ELCFont_fa_check_square">&#xf14a;</string>
+    <!-- Copy to use check_square_o -->
+    <string name="ELCFont_fa_check_square_o">&#xf046;</string>
+    <!-- Copy to use chevron_circle_down -->
+    <string name="ELCFont_fa_chevron_circle_down">&#xf13a;</string>
+    <!-- Copy to use chevron_circle_left -->
+    <string name="ELCFont_fa_chevron_circle_left">&#xf137;</string>
+    <!-- Copy to use chevron_circle_right -->
+    <string name="ELCFont_fa_chevron_circle_right">&#xf138;</string>
+    <!-- Copy to use chevron_circle_up -->
+    <string name="ELCFont_fa_chevron_circle_up">&#xf139;</string>
+    <!-- Copy to use chevron_down -->
+    <string name="ELCFont_fa_chevron_down">&#xf078;</string>
+    <!-- Copy to use chevron_left -->
+    <string name="ELCFont_fa_chevron_left">&#xf053;</string>
+    <!-- Copy to use chevron_right -->
+    <string name="ELCFont_fa_chevron_right">&#xf054;</string>
+    <!-- Copy to use chevron_up -->
+    <string name="ELCFont_fa_chevron_up">&#xf077;</string>
+    <!-- Copy to use child -->
+    <string name="ELCFont_fa_child">&#xf1ae;</string>
+    <!-- Copy to use chrome -->
+    <string name="ELCFont_fa_chrome">&#xf268;</string>
+    <!-- Copy to use circle -->
+    <string name="ELCFont_fa_circle">&#xf111;</string>
+    <!-- Copy to use circle_o -->
+    <string name="ELCFont_fa_circle_o">&#xf10c;</string>
+    <!-- Copy to use circle_o_notch -->
+    <string name="ELCFont_fa_circle_o_notch">&#xf1ce;</string>
+    <!-- Copy to use circle_thin -->
+    <string name="ELCFont_fa_circle_thin">&#xf1db;</string>
+    <!-- Copy to use clipboard -->
+    <string name="ELCFont_fa_clipboard">&#xf0ea;</string>
+    <!-- Copy to use clock_o -->
+    <string name="ELCFont_fa_clock_o">&#xf017;</string>
+    <!-- Copy to use clone -->
+    <string name="ELCFont_fa_clone">&#xf24d;</string>
+    <!-- Copy to use close -->
+    <string name="ELCFont_fa_close">&#xf00d;</string>
+    <!-- Copy to use cloud -->
+    <string name="ELCFont_fa_cloud">&#xf0c2;</string>
+    <!-- Copy to use cloud_download -->
+    <string name="ELCFont_fa_cloud_download">&#xf0ed;</string>
+    <!-- Copy to use cloud_upload -->
+    <string name="ELCFont_fa_cloud_upload">&#xf0ee;</string>
+    <!-- Copy to use cny -->
+    <string name="ELCFont_fa_cny">&#xf157;</string>
+    <!-- Copy to use code -->
+    <string name="ELCFont_fa_code">&#xf121;</string>
+    <!-- Copy to use code_fork -->
+    <string name="ELCFont_fa_code_fork">&#xf126;</string>
+    <!-- Copy to use codepen -->
+    <string name="ELCFont_fa_codepen">&#xf1cb;</string>
+    <!-- Copy to use codiepie -->
+    <string name="ELCFont_fa_codiepie">&#xf284;</string>
+    <!-- Copy to use coffee -->
+    <string name="ELCFont_fa_coffee">&#xf0f4;</string>
+    <!-- Copy to use cog -->
+    <string name="ELCFont_fa_cog">&#xf013;</string>
+    <!-- Copy to use cogs -->
+    <string name="ELCFont_fa_cogs">&#xf085;</string>
+    <!-- Copy to use columns -->
+    <string name="ELCFont_fa_columns">&#xf0db;</string>
+    <!-- Copy to use comment -->
+    <string name="ELCFont_fa_comment">&#xf075;</string>
+    <!-- Copy to use comment_o -->
+    <string name="ELCFont_fa_comment_o">&#xf0e5;</string>
+    <!-- Copy to use commenting -->
+    <string name="ELCFont_fa_commenting">&#xf27a;</string>
+    <!-- Copy to use commenting_o -->
+    <string name="ELCFont_fa_commenting_o">&#xf27b;</string>
+    <!-- Copy to use comments -->
+    <string name="ELCFont_fa_comments">&#xf086;</string>
+    <!-- Copy to use comments_o -->
+    <string name="ELCFont_fa_comments_o">&#xf0e6;</string>
+    <!-- Copy to use compass -->
+    <string name="ELCFont_fa_compass">&#xf14e;</string>
+    <!-- Copy to use compress -->
+    <string name="ELCFont_fa_compress">&#xf066;</string>
+    <!-- Copy to use connectdevelop -->
+    <string name="ELCFont_fa_connectdevelop">&#xf20e;</string>
+    <!-- Copy to use contao -->
+    <string name="ELCFont_fa_contao">&#xf26d;</string>
+    <!-- Copy to use copy -->
+    <string name="ELCFont_fa_copy">&#xf0c5;</string>
+    <!-- Copy to use copyright -->
+    <string name="ELCFont_fa_copyright">&#xf1f9;</string>
+    <!-- Copy to use creative_commons -->
+    <string name="ELCFont_fa_creative_commons">&#xf25e;</string>
+    <!-- Copy to use credit_card -->
+    <string name="ELCFont_fa_credit_card">&#xf09d;</string>
+    <!-- Copy to use credit_card_alt -->
+    <string name="ELCFont_fa_credit_card_alt">&#xf283;</string>
+    <!-- Copy to use crop -->
+    <string name="ELCFont_fa_crop">&#xf125;</string>
+    <!-- Copy to use crosshairs -->
+    <string name="ELCFont_fa_crosshairs">&#xf05b;</string>
+    <!-- Copy to use css3 -->
+    <string name="ELCFont_fa_css3">&#xf13c;</string>
+    <!-- Copy to use cube -->
+    <string name="ELCFont_fa_cube">&#xf1b2;</string>
+    <!-- Copy to use cubes -->
+    <string name="ELCFont_fa_cubes">&#xf1b3;</string>
+    <!-- Copy to use cut -->
+    <string name="ELCFont_fa_cut">&#xf0c4;</string>
+    <!-- Copy to use cutlery -->
+    <string name="ELCFont_fa_cutlery">&#xf0f5;</string>
+    <!-- Copy to use dashboard -->
+    <string name="ELCFont_fa_dashboard">&#xf0e4;</string>
+    <!-- Copy to use dashcube -->
+    <string name="ELCFont_fa_dashcube">&#xf210;</string>
+    <!-- Copy to use database -->
+    <string name="ELCFont_fa_database">&#xf1c0;</string>
+    <!-- Copy to use deaf -->
+    <string name="ELCFont_fa_deaf">&#xf2a4;</string>
+    <!-- Copy to use deafness -->
+    <string name="ELCFont_fa_deafness">&#xf2a4;</string>
+    <!-- Copy to use dedent -->
+    <string name="ELCFont_fa_dedent">&#xf03b;</string>
+    <!-- Copy to use delicious -->
+    <string name="ELCFont_fa_delicious">&#xf1a5;</string>
+    <!-- Copy to use desktop -->
+    <string name="ELCFont_fa_desktop">&#xf108;</string>
+    <!-- Copy to use deviantart -->
+    <string name="ELCFont_fa_deviantart">&#xf1bd;</string>
+    <!-- Copy to use diamond -->
+    <string name="ELCFont_fa_diamond">&#xf219;</string>
+    <!-- Copy to use digg -->
+    <string name="ELCFont_fa_digg">&#xf1a6;</string>
+    <!-- Copy to use dollar -->
+    <string name="ELCFont_fa_dollar">&#xf155;</string>
+    <!-- Copy to use dot_circle_o -->
+    <string name="ELCFont_fa_dot_circle_o">&#xf192;</string>
+    <!-- Copy to use download -->
+    <string name="ELCFont_fa_download">&#xf019;</string>
+    <!-- Copy to use dribbble -->
+    <string name="ELCFont_fa_dribbble">&#xf17d;</string>
+    <!-- Copy to use dropbox -->
+    <string name="ELCFont_fa_dropbox">&#xf16b;</string>
+    <!-- Copy to use drupal -->
+    <string name="ELCFont_fa_drupal">&#xf1a9;</string>
+    <!-- Copy to use edge -->
+    <string name="ELCFont_fa_edge">&#xf282;</string>
+    <!-- Copy to use edit -->
+    <string name="ELCFont_fa_edit">&#xf044;</string>
+    <!-- Copy to use eject -->
+    <string name="ELCFont_fa_eject">&#xf052;</string>
+    <!-- Copy to use ellipsis_h -->
+    <string name="ELCFont_fa_ellipsis_h">&#xf141;</string>
+    <!-- Copy to use ellipsis_v -->
+    <string name="ELCFont_fa_ellipsis_v">&#xf142;</string>
+    <!-- Copy to use empire -->
+    <string name="ELCFont_fa_empire">&#xf1d1;</string>
+    <!-- Copy to use envelope -->
+    <string name="ELCFont_fa_envelope">&#xf0e0;</string>
+    <!-- Copy to use envelope_o -->
+    <string name="ELCFont_fa_envelope_o">&#xf003;</string>
+    <!-- Copy to use envelope_square -->
+    <string name="ELCFont_fa_envelope_square">&#xf199;</string>
+    <!-- Copy to use envira -->
+    <string name="ELCFont_fa_envira">&#xf299;</string>
+    <!-- Copy to use eraser -->
+    <string name="ELCFont_fa_eraser">&#xf12d;</string>
+    <!-- Copy to use eur -->
+    <string name="ELCFont_fa_eur">&#xf153;</string>
+    <!-- Copy to use euro -->
+    <string name="ELCFont_fa_euro">&#xf153;</string>
+    <!-- Copy to use exchange -->
+    <string name="ELCFont_fa_exchange">&#xf0ec;</string>
+    <!-- Copy to use exclamation -->
+    <string name="ELCFont_fa_exclamation">&#xf12a;</string>
+    <!-- Copy to use exclamation_circle -->
+    <string name="ELCFont_fa_exclamation_circle">&#xf06a;</string>
+    <!-- Copy to use exclamation_triangle -->
+    <string name="ELCFont_fa_exclamation_triangle">&#xf071;</string>
+    <!-- Copy to use expand -->
+    <string name="ELCFont_fa_expand">&#xf065;</string>
+    <!-- Copy to use expeditedssl -->
+    <string name="ELCFont_fa_expeditedssl">&#xf23e;</string>
+    <!-- Copy to use external_link -->
+    <string name="ELCFont_fa_external_link">&#xf08e;</string>
+    <!-- Copy to use external_link_square -->
+    <string name="ELCFont_fa_external_link_square">&#xf14c;</string>
+    <!-- Copy to use eye -->
+    <string name="ELCFont_fa_eye">&#xf06e;</string>
+    <!-- Copy to use eye_slash -->
+    <string name="ELCFont_fa_eye_slash">&#xf070;</string>
+    <!-- Copy to use eyedropper -->
+    <string name="ELCFont_fa_eyedropper">&#xf1fb;</string>
+    <!-- Copy to use facebook -->
+    <string name="ELCFont_fa_facebook">&#xf09a;</string>
+    <!-- Copy to use facebook_f -->
+    <string name="ELCFont_fa_facebook_f">&#xf09a;</string>
+    <!-- Copy to use facebook_official -->
+    <string name="ELCFont_fa_facebook_official">&#xf230;</string>
+    <!-- Copy to use facebook_square -->
+    <string name="ELCFont_fa_facebook_square">&#xf082;</string>
+    <!-- Copy to use fast_backward -->
+    <string name="ELCFont_fa_fast_backward">&#xf049;</string>
+    <!-- Copy to use fast_forward -->
+    <string name="ELCFont_fa_fast_forward">&#xf050;</string>
+    <!-- Copy to use fax -->
+    <string name="ELCFont_fa_fax">&#xf1ac;</string>
+    <!-- Copy to use feed -->
+    <string name="ELCFont_fa_feed">&#xf09e;</string>
+    <!-- Copy to use female -->
+    <string name="ELCFont_fa_female">&#xf182;</string>
+    <!-- Copy to use fighter_jet -->
+    <string name="ELCFont_fa_fighter_jet">&#xf0fb;</string>
+    <!-- Copy to use file -->
+    <string name="ELCFont_fa_file">&#xf15b;</string>
+    <!-- Copy to use file_archive_o -->
+    <string name="ELCFont_fa_file_archive_o">&#xf1c6;</string>
+    <!-- Copy to use file_audio_o -->
+    <string name="ELCFont_fa_file_audio_o">&#xf1c7;</string>
+    <!-- Copy to use file_code_o -->
+    <string name="ELCFont_fa_file_code_o">&#xf1c9;</string>
+    <!-- Copy to use file_excel_o -->
+    <string name="ELCFont_fa_file_excel_o">&#xf1c3;</string>
+    <!-- Copy to use file_image_o -->
+    <string name="ELCFont_fa_file_image_o">&#xf1c5;</string>
+    <!-- Copy to use file_movie_o -->
+    <string name="ELCFont_fa_file_movie_o">&#xf1c8;</string>
+    <!-- Copy to use file_o -->
+    <string name="ELCFont_fa_file_o">&#xf016;</string>
+    <!-- Copy to use file_pdf_o -->
+    <string name="ELCFont_fa_file_pdf_o">&#xf1c1;</string>
+    <!-- Copy to use file_photo_o -->
+    <string name="ELCFont_fa_file_photo_o">&#xf1c5;</string>
+    <!-- Copy to use file_picture_o -->
+    <string name="ELCFont_fa_file_picture_o">&#xf1c5;</string>
+    <!-- Copy to use file_powerpoint_o -->
+    <string name="ELCFont_fa_file_powerpoint_o">&#xf1c4;</string>
+    <!-- Copy to use file_sound_o -->
+    <string name="ELCFont_fa_file_sound_o">&#xf1c7;</string>
+    <!-- Copy to use file_text -->
+    <string name="ELCFont_fa_file_text">&#xf15c;</string>
+    <!-- Copy to use file_text_o -->
+    <string name="ELCFont_fa_file_text_o">&#xf0f6;</string>
+    <!-- Copy to use file_video_o -->
+    <string name="ELCFont_fa_file_video_o">&#xf1c8;</string>
+    <!-- Copy to use file_word_o -->
+    <string name="ELCFont_fa_file_word_o">&#xf1c2;</string>
+    <!-- Copy to use file_zip_o -->
+    <string name="ELCFont_fa_file_zip_o">&#xf1c6;</string>
+    <!-- Copy to use files_o -->
+    <string name="ELCFont_fa_files_o">&#xf0c5;</string>
+    <!-- Copy to use film -->
+    <string name="ELCFont_fa_film">&#xf008;</string>
+    <!-- Copy to use filter -->
+    <string name="ELCFont_fa_filter">&#xf0b0;</string>
+    <!-- Copy to use fire -->
+    <string name="ELCFont_fa_fire">&#xf06d;</string>
+    <!-- Copy to use fire_extinguisher -->
+    <string name="ELCFont_fa_fire_extinguisher">&#xf134;</string>
+    <!-- Copy to use firefox -->
+    <string name="ELCFont_fa_firefox">&#xf269;</string>
+    <!-- Copy to use first_order -->
+    <string name="ELCFont_fa_first_order">&#xf2b0;</string>
+    <!-- Copy to use flag -->
+    <string name="ELCFont_fa_flag">&#xf024;</string>
+    <!-- Copy to use flag_checkered -->
+    <string name="ELCFont_fa_flag_checkered">&#xf11e;</string>
+    <!-- Copy to use flag_o -->
+    <string name="ELCFont_fa_flag_o">&#xf11d;</string>
+    <!-- Copy to use flash -->
+    <string name="ELCFont_fa_flash">&#xf0e7;</string>
+    <!-- Copy to use flask -->
+    <string name="ELCFont_fa_flask">&#xf0c3;</string>
+    <!-- Copy to use flickr -->
+    <string name="ELCFont_fa_flickr">&#xf16e;</string>
+    <!-- Copy to use floppy_o -->
+    <string name="ELCFont_fa_floppy_o">&#xf0c7;</string>
+    <!-- Copy to use folder -->
+    <string name="ELCFont_fa_folder">&#xf07b;</string>
+    <!-- Copy to use folder_o -->
+    <string name="ELCFont_fa_folder_o">&#xf114;</string>
+    <!-- Copy to use folder_open -->
+    <string name="ELCFont_fa_folder_open">&#xf07c;</string>
+    <!-- Copy to use folder_open_o -->
+    <string name="ELCFont_fa_folder_open_o">&#xf115;</string>
+    <!-- Copy to use font -->
+    <string name="ELCFont_fa_font">&#xf031;</string>
+    <!-- Copy to use fonticons -->
+    <string name="ELCFont_fa_fonticons">&#xf280;</string>
+    <!-- Copy to use fort_awesome -->
+    <string name="ELCFont_fa_fort_awesome">&#xf286;</string>
+    <!-- Copy to use forumbee -->
+    <string name="ELCFont_fa_forumbee">&#xf211;</string>
+    <!-- Copy to use forward -->
+    <string name="ELCFont_fa_forward">&#xf04e;</string>
+    <!-- Copy to use foursquare -->
+    <string name="ELCFont_fa_foursquare">&#xf180;</string>
+    <!-- Copy to use frown_o -->
+    <string name="ELCFont_fa_frown_o">&#xf119;</string>
+    <!-- Copy to use futbol_o -->
+    <string name="ELCFont_fa_futbol_o">&#xf1e3;</string>
+    <!-- Copy to use gamepad -->
+    <string name="ELCFont_fa_gamepad">&#xf11b;</string>
+    <!-- Copy to use gavel -->
+    <string name="ELCFont_fa_gavel">&#xf0e3;</string>
+    <!-- Copy to use gbp -->
+    <string name="ELCFont_fa_gbp">&#xf154;</string>
+    <!-- Copy to use ge -->
+    <string name="ELCFont_fa_ge">&#xf1d1;</string>
+    <!-- Copy to use gear -->
+    <string name="ELCFont_fa_gear">&#xf013;</string>
+    <!-- Copy to use gears -->
+    <string name="ELCFont_fa_gears">&#xf085;</string>
+    <!-- Copy to use genderless -->
+    <string name="ELCFont_fa_genderless">&#xf22d;</string>
+    <!-- Copy to use get_pocket -->
+    <string name="ELCFont_fa_get_pocket">&#xf265;</string>
+    <!-- Copy to use gg -->
+    <string name="ELCFont_fa_gg">&#xf260;</string>
+    <!-- Copy to use gg_circle -->
+    <string name="ELCFont_fa_gg_circle">&#xf261;</string>
+    <!-- Copy to use gift -->
+    <string name="ELCFont_fa_gift">&#xf06b;</string>
+    <!-- Copy to use git -->
+    <string name="ELCFont_fa_git">&#xf1d3;</string>
+    <!-- Copy to use git_square -->
+    <string name="ELCFont_fa_git_square">&#xf1d2;</string>
+    <!-- Copy to use github -->
+    <string name="ELCFont_fa_github">&#xf09b;</string>
+    <!-- Copy to use github_alt -->
+    <string name="ELCFont_fa_github_alt">&#xf113;</string>
+    <!-- Copy to use github_square -->
+    <string name="ELCFont_fa_github_square">&#xf092;</string>
+    <!-- Copy to use gitlab -->
+    <string name="ELCFont_fa_gitlab">&#xf296;</string>
+    <!-- Copy to use gittip -->
+    <string name="ELCFont_fa_gittip">&#xf184;</string>
+    <!-- Copy to use glass -->
+    <string name="ELCFont_fa_glass">&#xf000;</string>
+    <!-- Copy to use glide -->
+    <string name="ELCFont_fa_glide">&#xf2a5;</string>
+    <!-- Copy to use glide_g -->
+    <string name="ELCFont_fa_glide_g">&#xf2a6;</string>
+    <!-- Copy to use globe -->
+    <string name="ELCFont_fa_globe">&#xf0ac;</string>
+    <!-- Copy to use google -->
+    <string name="ELCFont_fa_google">&#xf1a0;</string>
+    <!-- Copy to use google_plus -->
+    <string name="ELCFont_fa_google_plus">&#xf0d5;</string>
+    <!-- Copy to use google_plus_square -->
+    <string name="ELCFont_fa_google_plus_square">&#xf0d4;</string>
+    <!-- Copy to use google_wallet -->
+    <string name="ELCFont_fa_google_wallet">&#xf1ee;</string>
+    <!-- Copy to use graduation_cap -->
+    <string name="ELCFont_fa_graduation_cap">&#xf19d;</string>
+    <!-- Copy to use gratipay -->
+    <string name="ELCFont_fa_gratipay">&#xf184;</string>
+    <!-- Copy to use group -->
+    <string name="ELCFont_fa_group">&#xf0c0;</string>
+    <!-- Copy to use h_square -->
+    <string name="ELCFont_fa_h_square">&#xf0fd;</string>
+    <!-- Copy to use hacker_news -->
+    <string name="ELCFont_fa_hacker_news">&#xf1d4;</string>
+    <!-- Copy to use hand_grab_o -->
+    <string name="ELCFont_fa_hand_grab_o">&#xf255;</string>
+    <!-- Copy to use hand_lizard_o -->
+    <string name="ELCFont_fa_hand_lizard_o">&#xf258;</string>
+    <!-- Copy to use hand_o_down -->
+    <string name="ELCFont_fa_hand_o_down">&#xf0a7;</string>
+    <!-- Copy to use hand_o_left -->
+    <string name="ELCFont_fa_hand_o_left">&#xf0a5;</string>
+    <!-- Copy to use hand_o_right -->
+    <string name="ELCFont_fa_hand_o_right">&#xf0a4;</string>
+    <!-- Copy to use hand_o_up -->
+    <string name="ELCFont_fa_hand_o_up">&#xf0a6;</string>
+    <!-- Copy to use hand_paper_o -->
+    <string name="ELCFont_fa_hand_paper_o">&#xf256;</string>
+    <!-- Copy to use hand_peace_o -->
+    <string name="ELCFont_fa_hand_peace_o">&#xf25b;</string>
+    <!-- Copy to use hand_pointer_o -->
+    <string name="ELCFont_fa_hand_pointer_o">&#xf25a;</string>
+    <!-- Copy to use hand_rock_o -->
+    <string name="ELCFont_fa_hand_rock_o">&#xf255;</string>
+    <!-- Copy to use hand_scissors_o -->
+    <string name="ELCFont_fa_hand_scissors_o">&#xf257;</string>
+    <!-- Copy to use hand_spock_o -->
+    <string name="ELCFont_fa_hand_spock_o">&#xf259;</string>
+    <!-- Copy to use hand_stop_o -->
+    <string name="ELCFont_fa_hand_stop_o">&#xf256;</string>
+    <!-- Copy to use hard_of_hearing -->
+    <string name="ELCFont_fa_hard_of_hearing">&#xf2a4;</string>
+    <!-- Copy to use hashtag -->
+    <string name="ELCFont_fa_hashtag">&#xf292;</string>
+    <!-- Copy to use hdd_o -->
+    <string name="ELCFont_fa_hdd_o">&#xf0a0;</string>
+    <!-- Copy to use header -->
+    <string name="ELCFont_fa_header">&#xf1dc;</string>
+    <!-- Copy to use headphones -->
+    <string name="ELCFont_fa_headphones">&#xf025;</string>
+    <!-- Copy to use heart -->
+    <string name="ELCFont_fa_heart">&#xf004;</string>
+    <!-- Copy to use heart_o -->
+    <string name="ELCFont_fa_heart_o">&#xf08a;</string>
+    <!-- Copy to use heartbeat -->
+    <string name="ELCFont_fa_heartbeat">&#xf21e;</string>
+    <!-- Copy to use history -->
+    <string name="ELCFont_fa_history">&#xf1da;</string>
+    <!-- Copy to use home -->
+    <string name="ELCFont_fa_home">&#xf015;</string>
+    <!-- Copy to use hospital_o -->
+    <string name="ELCFont_fa_hospital_o">&#xf0f8;</string>
+    <!-- Copy to use hotel -->
+    <string name="ELCFont_fa_hotel">&#xf236;</string>
+    <!-- Copy to use hourglass -->
+    <string name="ELCFont_fa_hourglass">&#xf254;</string>
+    <!-- Copy to use hourglass_1 -->
+    <string name="ELCFont_fa_hourglass_1">&#xf251;</string>
+    <!-- Copy to use hourglass_2 -->
+    <string name="ELCFont_fa_hourglass_2">&#xf252;</string>
+    <!-- Copy to use hourglass_3 -->
+    <string name="ELCFont_fa_hourglass_3">&#xf253;</string>
+    <!-- Copy to use hourglass_end -->
+    <string name="ELCFont_fa_hourglass_end">&#xf253;</string>
+    <!-- Copy to use hourglass_half -->
+    <string name="ELCFont_fa_hourglass_half">&#xf252;</string>
+    <!-- Copy to use hourglass_o -->
+    <string name="ELCFont_fa_hourglass_o">&#xf250;</string>
+    <!-- Copy to use hourglass_start -->
+    <string name="ELCFont_fa_hourglass_start">&#xf251;</string>
+    <!-- Copy to use houzz -->
+    <string name="ELCFont_fa_houzz">&#xf27c;</string>
+    <!-- Copy to use html5 -->
+    <string name="ELCFont_fa_html5">&#xf13b;</string>
+    <!-- Copy to use i_cursor -->
+    <string name="ELCFont_fa_i_cursor">&#xf246;</string>
+    <!-- Copy to use ils -->
+    <string name="ELCFont_fa_ils">&#xf20b;</string>
+    <!-- Copy to use image -->
+    <string name="ELCFont_fa_image">&#xf03e;</string>
+    <!-- Copy to use inbox -->
+    <string name="ELCFont_fa_inbox">&#xf01c;</string>
+    <!-- Copy to use indent -->
+    <string name="ELCFont_fa_indent">&#xf03c;</string>
+    <!-- Copy to use industry -->
+    <string name="ELCFont_fa_industry">&#xf275;</string>
+    <!-- Copy to use info -->
+    <string name="ELCFont_fa_info">&#xf129;</string>
+    <!-- Copy to use info_circle -->
+    <string name="ELCFont_fa_info_circle">&#xf05a;</string>
+    <!-- Copy to use inr -->
+    <string name="ELCFont_fa_inr">&#xf156;</string>
+    <!-- Copy to use instagram -->
+    <string name="ELCFont_fa_instagram">&#xf16d;</string>
+    <!-- Copy to use institution -->
+    <string name="ELCFont_fa_institution">&#xf19c;</string>
+    <!-- Copy to use internet_explorer -->
+    <string name="ELCFont_fa_internet_explorer">&#xf26b;</string>
+    <!-- Copy to use intersex -->
+    <string name="ELCFont_fa_intersex">&#xf224;</string>
+    <!-- Copy to use ioxhost -->
+    <string name="ELCFont_fa_ioxhost">&#xf208;</string>
+    <!-- Copy to use italic -->
+    <string name="ELCFont_fa_italic">&#xf033;</string>
+    <!-- Copy to use joomla -->
+    <string name="ELCFont_fa_joomla">&#xf1aa;</string>
+    <!-- Copy to use jpy -->
+    <string name="ELCFont_fa_jpy">&#xf157;</string>
+    <!-- Copy to use jsfiddle -->
+    <string name="ELCFont_fa_jsfiddle">&#xf1cc;</string>
+    <!-- Copy to use key -->
+    <string name="ELCFont_fa_key">&#xf084;</string>
+    <!-- Copy to use keyboard_o -->
+    <string name="ELCFont_fa_keyboard_o">&#xf11c;</string>
+    <!-- Copy to use krw -->
+    <string name="ELCFont_fa_krw">&#xf159;</string>
+    <!-- Copy to use language -->
+    <string name="ELCFont_fa_language">&#xf1ab;</string>
+    <!-- Copy to use laptop -->
+    <string name="ELCFont_fa_laptop">&#xf109;</string>
+    <!-- Copy to use lastfm -->
+    <string name="ELCFont_fa_lastfm">&#xf202;</string>
+    <!-- Copy to use lastfm_square -->
+    <string name="ELCFont_fa_lastfm_square">&#xf203;</string>
+    <!-- Copy to use leaf -->
+    <string name="ELCFont_fa_leaf">&#xf06c;</string>
+    <!-- Copy to use leanpub -->
+    <string name="ELCFont_fa_leanpub">&#xf212;</string>
+    <!-- Copy to use legal -->
+    <string name="ELCFont_fa_legal">&#xf0e3;</string>
+    <!-- Copy to use lemon_o -->
+    <string name="ELCFont_fa_lemon_o">&#xf094;</string>
+    <!-- Copy to use level_down -->
+    <string name="ELCFont_fa_level_down">&#xf149;</string>
+    <!-- Copy to use level_up -->
+    <string name="ELCFont_fa_level_up">&#xf148;</string>
+    <!-- Copy to use life_bouy -->
+    <string name="ELCFont_fa_life_bouy">&#xf1cd;</string>
+    <!-- Copy to use life_buoy -->
+    <string name="ELCFont_fa_life_buoy">&#xf1cd;</string>
+    <!-- Copy to use life_ring -->
+    <string name="ELCFont_fa_life_ring">&#xf1cd;</string>
+    <!-- Copy to use life_saver -->
+    <string name="ELCFont_fa_life_saver">&#xf1cd;</string>
+    <!-- Copy to use lightbulb_o -->
+    <string name="ELCFont_fa_lightbulb_o">&#xf0eb;</string>
+    <!-- Copy to use line_chart -->
+    <string name="ELCFont_fa_line_chart">&#xf201;</string>
+    <!-- Copy to use link -->
+    <string name="ELCFont_fa_link">&#xf0c1;</string>
+    <!-- Copy to use linkedin -->
+    <string name="ELCFont_fa_linkedin">&#xf0e1;</string>
+    <!-- Copy to use linkedin_square -->
+    <string name="ELCFont_fa_linkedin_square">&#xf08c;</string>
+    <!-- Copy to use linux -->
+    <string name="ELCFont_fa_linux">&#xf17c;</string>
+    <!-- Copy to use list -->
+    <string name="ELCFont_fa_list">&#xf03a;</string>
+    <!-- Copy to use list_alt -->
+    <string name="ELCFont_fa_list_alt">&#xf022;</string>
+    <!-- Copy to use list_ol -->
+    <string name="ELCFont_fa_list_ol">&#xf0cb;</string>
+    <!-- Copy to use list_ul -->
+    <string name="ELCFont_fa_list_ul">&#xf0ca;</string>
+    <!-- Copy to use location_arrow -->
+    <string name="ELCFont_fa_location_arrow">&#xf124;</string>
+    <!-- Copy to use lock -->
+    <string name="ELCFont_fa_lock">&#xf023;</string>
+    <!-- Copy to use long_arrow_down -->
+    <string name="ELCFont_fa_long_arrow_down">&#xf175;</string>
+    <!-- Copy to use long_arrow_left -->
+    <string name="ELCFont_fa_long_arrow_left">&#xf177;</string>
+    <!-- Copy to use long_arrow_right -->
+    <string name="ELCFont_fa_long_arrow_right">&#xf178;</string>
+    <!-- Copy to use long_arrow_up -->
+    <string name="ELCFont_fa_long_arrow_up">&#xf176;</string>
+    <!-- Copy to use low_vision -->
+    <string name="ELCFont_fa_low_vision">&#xf2a8;</string>
+    <!-- Copy to use magic -->
+    <string name="ELCFont_fa_magic">&#xf0d0;</string>
+    <!-- Copy to use magnet -->
+    <string name="ELCFont_fa_magnet">&#xf076;</string>
+    <!-- Copy to use mail_forward -->
+    <string name="ELCFont_fa_mail_forward">&#xf064;</string>
+    <!-- Copy to use mail_reply -->
+    <string name="ELCFont_fa_mail_reply">&#xf112;</string>
+    <!-- Copy to use mail_reply_all -->
+    <string name="ELCFont_fa_mail_reply_all">&#xf122;</string>
+    <!-- Copy to use male -->
+    <string name="ELCFont_fa_male">&#xf183;</string>
+    <!-- Copy to use map -->
+    <string name="ELCFont_fa_map">&#xf279;</string>
+    <!-- Copy to use map_marker -->
+    <string name="ELCFont_fa_map_marker">&#xf041;</string>
+    <!-- Copy to use map_o -->
+    <string name="ELCFont_fa_map_o">&#xf278;</string>
+    <!-- Copy to use map_pin -->
+    <string name="ELCFont_fa_map_pin">&#xf276;</string>
+    <!-- Copy to use map_signs -->
+    <string name="ELCFont_fa_map_signs">&#xf277;</string>
+    <!-- Copy to use mars -->
+    <string name="ELCFont_fa_mars">&#xf222;</string>
+    <!-- Copy to use mars_double -->
+    <string name="ELCFont_fa_mars_double">&#xf227;</string>
+    <!-- Copy to use mars_stroke -->
+    <string name="ELCFont_fa_mars_stroke">&#xf229;</string>
+    <!-- Copy to use mars_stroke_h -->
+    <string name="ELCFont_fa_mars_stroke_h">&#xf22b;</string>
+    <!-- Copy to use mars_stroke_v -->
+    <string name="ELCFont_fa_mars_stroke_v">&#xf22a;</string>
+    <!-- Copy to use maxcdn -->
+    <string name="ELCFont_fa_maxcdn">&#xf136;</string>
+    <!-- Copy to use meanpath -->
+    <string name="ELCFont_fa_meanpath">&#xf20c;</string>
+    <!-- Copy to use medium -->
+    <string name="ELCFont_fa_medium">&#xf23a;</string>
+    <!-- Copy to use medkit -->
+    <string name="ELCFont_fa_medkit">&#xf0fa;</string>
+    <!-- Copy to use meh_o -->
+    <string name="ELCFont_fa_meh_o">&#xf11a;</string>
+    <!-- Copy to use mercury -->
+    <string name="ELCFont_fa_mercury">&#xf223;</string>
+    <!-- Copy to use microphone -->
+    <string name="ELCFont_fa_microphone">&#xf130;</string>
+    <!-- Copy to use microphone_slash -->
+    <string name="ELCFont_fa_microphone_slash">&#xf131;</string>
+    <!-- Copy to use minus -->
+    <string name="ELCFont_fa_minus">&#xf068;</string>
+    <!-- Copy to use minus_circle -->
+    <string name="ELCFont_fa_minus_circle">&#xf056;</string>
+    <!-- Copy to use minus_square -->
+    <string name="ELCFont_fa_minus_square">&#xf146;</string>
+    <!-- Copy to use minus_square_o -->
+    <string name="ELCFont_fa_minus_square_o">&#xf147;</string>
+    <!-- Copy to use mixcloud -->
+    <string name="ELCFont_fa_mixcloud">&#xf289;</string>
+    <!-- Copy to use mobile -->
+    <string name="ELCFont_fa_mobile">&#xf10b;</string>
+    <!-- Copy to use mobile_phone -->
+    <string name="ELCFont_fa_mobile_phone">&#xf10b;</string>
+    <!-- Copy to use modx -->
+    <string name="ELCFont_fa_modx">&#xf285;</string>
+    <!-- Copy to use money -->
+    <string name="ELCFont_fa_money">&#xf0d6;</string>
+    <!-- Copy to use moon_o -->
+    <string name="ELCFont_fa_moon_o">&#xf186;</string>
+    <!-- Copy to use mortar_board -->
+    <string name="ELCFont_fa_mortar_board">&#xf19d;</string>
+    <!-- Copy to use motorcycle -->
+    <string name="ELCFont_fa_motorcycle">&#xf21c;</string>
+    <!-- Copy to use mouse_pointer -->
+    <string name="ELCFont_fa_mouse_pointer">&#xf245;</string>
+    <!-- Copy to use music -->
+    <string name="ELCFont_fa_music">&#xf001;</string>
+    <!-- Copy to use navicon -->
+    <string name="ELCFont_fa_navicon">&#xf0c9;</string>
+    <!-- Copy to use neuter -->
+    <string name="ELCFont_fa_neuter">&#xf22c;</string>
+    <!-- Copy to use newspaper_o -->
+    <string name="ELCFont_fa_newspaper_o">&#xf1ea;</string>
+    <!-- Copy to use object_group -->
+    <string name="ELCFont_fa_object_group">&#xf247;</string>
+    <!-- Copy to use object_ungroup -->
+    <string name="ELCFont_fa_object_ungroup">&#xf248;</string>
+    <!-- Copy to use odnoklassniki -->
+    <string name="ELCFont_fa_odnoklassniki">&#xf263;</string>
+    <!-- Copy to use odnoklassniki_square -->
+    <string name="ELCFont_fa_odnoklassniki_square">&#xf264;</string>
+    <!-- Copy to use opencart -->
+    <string name="ELCFont_fa_opencart">&#xf23d;</string>
+    <!-- Copy to use openid -->
+    <string name="ELCFont_fa_openid">&#xf19b;</string>
+    <!-- Copy to use opera -->
+    <string name="ELCFont_fa_opera">&#xf26a;</string>
+    <!-- Copy to use optin_monster -->
+    <string name="ELCFont_fa_optin_monster">&#xf23c;</string>
+    <!-- Copy to use outdent -->
+    <string name="ELCFont_fa_outdent">&#xf03b;</string>
+    <!-- Copy to use pagelines -->
+    <string name="ELCFont_fa_pagelines">&#xf18c;</string>
+    <!-- Copy to use paint_brush -->
+    <string name="ELCFont_fa_paint_brush">&#xf1fc;</string>
+    <!-- Copy to use paper_plane -->
+    <string name="ELCFont_fa_paper_plane">&#xf1d8;</string>
+    <!-- Copy to use paper_plane_o -->
+    <string name="ELCFont_fa_paper_plane_o">&#xf1d9;</string>
+    <!-- Copy to use paperclip -->
+    <string name="ELCFont_fa_paperclip">&#xf0c6;</string>
+    <!-- Copy to use paragraph -->
+    <string name="ELCFont_fa_paragraph">&#xf1dd;</string>
+    <!-- Copy to use paste -->
+    <string name="ELCFont_fa_paste">&#xf0ea;</string>
+    <!-- Copy to use pause -->
+    <string name="ELCFont_fa_pause">&#xf04c;</string>
+    <!-- Copy to use pause_circle -->
+    <string name="ELCFont_fa_pause_circle">&#xf28b;</string>
+    <!-- Copy to use pause_circle_o -->
+    <string name="ELCFont_fa_pause_circle_o">&#xf28c;</string>
+    <!-- Copy to use paw -->
+    <string name="ELCFont_fa_paw">&#xf1b0;</string>
+    <!-- Copy to use paypal -->
+    <string name="ELCFont_fa_paypal">&#xf1ed;</string>
+    <!-- Copy to use pencil -->
+    <string name="ELCFont_fa_pencil">&#xf040;</string>
+    <!-- Copy to use pencil_square -->
+    <string name="ELCFont_fa_pencil_square">&#xf14b;</string>
+    <!-- Copy to use pencil_square_o -->
+    <string name="ELCFont_fa_pencil_square_o">&#xf044;</string>
+    <!-- Copy to use percent -->
+    <string name="ELCFont_fa_percent">&#xf295;</string>
+    <!-- Copy to use phone -->
+    <string name="ELCFont_fa_phone">&#xf095;</string>
+    <!-- Copy to use phone_square -->
+    <string name="ELCFont_fa_phone_square">&#xf098;</string>
+    <!-- Copy to use photo -->
+    <string name="ELCFont_fa_photo">&#xf03e;</string>
+    <!-- Copy to use picture_o -->
+    <string name="ELCFont_fa_picture_o">&#xf03e;</string>
+    <!-- Copy to use pie_chart -->
+    <string name="ELCFont_fa_pie_chart">&#xf200;</string>
+    <!-- Copy to use pied_piper -->
+    <string name="ELCFont_fa_pied_piper">&#xf2ae;</string>
+    <!-- Copy to use pied_piper_alt -->
+    <string name="ELCFont_fa_pied_piper_alt">&#xf1a8;</string>
+    <!-- Copy to use pied_piper_pp -->
+    <string name="ELCFont_fa_pied_piper_pp">&#xf1a7;</string>
+    <!-- Copy to use pinterest -->
+    <string name="ELCFont_fa_pinterest">&#xf0d2;</string>
+    <!-- Copy to use pinterest_p -->
+    <string name="ELCFont_fa_pinterest_p">&#xf231;</string>
+    <!-- Copy to use pinterest_square -->
+    <string name="ELCFont_fa_pinterest_square">&#xf0d3;</string>
+    <!-- Copy to use plane -->
+    <string name="ELCFont_fa_plane">&#xf072;</string>
+    <!-- Copy to use play -->
+    <string name="ELCFont_fa_play">&#xf04b;</string>
+    <!-- Copy to use play_circle -->
+    <string name="ELCFont_fa_play_circle">&#xf144;</string>
+    <!-- Copy to use play_circle_o -->
+    <string name="ELCFont_fa_play_circle_o">&#xf01d;</string>
+    <!-- Copy to use plug -->
+    <string name="ELCFont_fa_plug">&#xf1e6;</string>
+    <!-- Copy to use plus -->
+    <string name="ELCFont_fa_plus">&#xf067;</string>
+    <!-- Copy to use plus_circle -->
+    <string name="ELCFont_fa_plus_circle">&#xf055;</string>
+    <!-- Copy to use plus_square -->
+    <string name="ELCFont_fa_plus_square">&#xf0fe;</string>
+    <!-- Copy to use plus_square_o -->
+    <string name="ELCFont_fa_plus_square_o">&#xf196;</string>
+    <!-- Copy to use power_off -->
+    <string name="ELCFont_fa_power_off">&#xf011;</string>
+    <!-- Copy to use print -->
+    <string name="ELCFont_fa_print">&#xf02f;</string>
+    <!-- Copy to use product_hunt -->
+    <string name="ELCFont_fa_product_hunt">&#xf288;</string>
+    <!-- Copy to use puzzle_piece -->
+    <string name="ELCFont_fa_puzzle_piece">&#xf12e;</string>
+    <!-- Copy to use qq -->
+    <string name="ELCFont_fa_qq">&#xf1d6;</string>
+    <!-- Copy to use qrcode -->
+    <string name="ELCFont_fa_qrcode">&#xf029;</string>
+    <!-- Copy to use question -->
+    <string name="ELCFont_fa_question">&#xf128;</string>
+    <!-- Copy to use question_circle -->
+    <string name="ELCFont_fa_question_circle">&#xf059;</string>
+    <!-- Copy to use question_circle_o -->
+    <string name="ELCFont_fa_question_circle_o">&#xf29c;</string>
+    <!-- Copy to use quote_left -->
+    <string name="ELCFont_fa_quote_left">&#xf10d;</string>
+    <!-- Copy to use quote_right -->
+    <string name="ELCFont_fa_quote_right">&#xf10e;</string>
+    <!-- Copy to use ra -->
+    <string name="ELCFont_fa_ra">&#xf1d0;</string>
+    <!-- Copy to use random -->
+    <string name="ELCFont_fa_random">&#xf074;</string>
+    <!-- Copy to use rebel -->
+    <string name="ELCFont_fa_rebel">&#xf1d0;</string>
+    <!-- Copy to use recycle -->
+    <string name="ELCFont_fa_recycle">&#xf1b8;</string>
+    <!-- Copy to use reddit -->
+    <string name="ELCFont_fa_reddit">&#xf1a1;</string>
+    <!-- Copy to use reddit_alien -->
+    <string name="ELCFont_fa_reddit_alien">&#xf281;</string>
+    <!-- Copy to use reddit_square -->
+    <string name="ELCFont_fa_reddit_square">&#xf1a2;</string>
+    <!-- Copy to use refresh -->
+    <string name="ELCFont_fa_refresh">&#xf021;</string>
+    <!-- Copy to use registered -->
+    <string name="ELCFont_fa_registered">&#xf25d;</string>
+    <!-- Copy to use remove -->
+    <string name="ELCFont_fa_remove">&#xf00d;</string>
+    <!-- Copy to use renren -->
+    <string name="ELCFont_fa_renren">&#xf18b;</string>
+    <!-- Copy to use reorder -->
+    <string name="ELCFont_fa_reorder">&#xf0c9;</string>
+    <!-- Copy to use repeat -->
+    <string name="ELCFont_fa_repeat">&#xf01e;</string>
+    <!-- Copy to use reply -->
+    <string name="ELCFont_fa_reply">&#xf112;</string>
+    <!-- Copy to use reply_all -->
+    <string name="ELCFont_fa_reply_all">&#xf122;</string>
+    <!-- Copy to use resistance -->
+    <string name="ELCFont_fa_resistance">&#xf1d0;</string>
+    <!-- Copy to use retweet -->
+    <string name="ELCFont_fa_retweet">&#xf079;</string>
+    <!-- Copy to use rmb -->
+    <string name="ELCFont_fa_rmb">&#xf157;</string>
+    <!-- Copy to use road -->
+    <string name="ELCFont_fa_road">&#xf018;</string>
+    <!-- Copy to use rocket -->
+    <string name="ELCFont_fa_rocket">&#xf135;</string>
+    <!-- Copy to use rotate_left -->
+    <string name="ELCFont_fa_rotate_left">&#xf0e2;</string>
+    <!-- Copy to use rotate_right -->
+    <string name="ELCFont_fa_rotate_right">&#xf01e;</string>
+    <!-- Copy to use rouble -->
+    <string name="ELCFont_fa_rouble">&#xf158;</string>
+    <!-- Copy to use rss -->
+    <string name="ELCFont_fa_rss">&#xf09e;</string>
+    <!-- Copy to use rss_square -->
+    <string name="ELCFont_fa_rss_square">&#xf143;</string>
+    <!-- Copy to use rub -->
+    <string name="ELCFont_fa_rub">&#xf158;</string>
+    <!-- Copy to use ruble -->
+    <string name="ELCFont_fa_ruble">&#xf158;</string>
+    <!-- Copy to use rupee -->
+    <string name="ELCFont_fa_rupee">&#xf156;</string>
+    <!-- Copy to use safari -->
+    <string name="ELCFont_fa_safari">&#xf267;</string>
+    <!-- Copy to use save -->
+    <string name="ELCFont_fa_save">&#xf0c7;</string>
+    <!-- Copy to use scissors -->
+    <string name="ELCFont_fa_scissors">&#xf0c4;</string>
+    <!-- Copy to use scribd -->
+    <string name="ELCFont_fa_scribd">&#xf28a;</string>
+    <!-- Copy to use search -->
+    <string name="ELCFont_fa_search">&#xf002;</string>
+    <!-- Copy to use search_minus -->
+    <string name="ELCFont_fa_search_minus">&#xf010;</string>
+    <!-- Copy to use search_plus -->
+    <string name="ELCFont_fa_search_plus">&#xf00e;</string>
+    <!-- Copy to use sellsy -->
+    <string name="ELCFont_fa_sellsy">&#xf213;</string>
+    <!-- Copy to use send -->
+    <string name="ELCFont_fa_send">&#xf1d8;</string>
+    <!-- Copy to use send_o -->
+    <string name="ELCFont_fa_send_o">&#xf1d9;</string>
+    <!-- Copy to use server -->
+    <string name="ELCFont_fa_server">&#xf233;</string>
+    <!-- Copy to use share -->
+    <string name="ELCFont_fa_share">&#xf064;</string>
+    <!-- Copy to use share_alt -->
+    <string name="ELCFont_fa_share_alt">&#xf1e0;</string>
+    <!-- Copy to use share_alt_square -->
+    <string name="ELCFont_fa_share_alt_square">&#xf1e1;</string>
+    <!-- Copy to use share_square -->
+    <string name="ELCFont_fa_share_square">&#xf14d;</string>
+    <!-- Copy to use share_square_o -->
+    <string name="ELCFont_fa_share_square_o">&#xf045;</string>
+    <!-- Copy to use shekel -->
+    <string name="ELCFont_fa_shekel">&#xf20b;</string>
+    <!-- Copy to use sheqel -->
+    <string name="ELCFont_fa_sheqel">&#xf20b;</string>
+    <!-- Copy to use shield -->
+    <string name="ELCFont_fa_shield">&#xf132;</string>
+    <!-- Copy to use ship -->
+    <string name="ELCFont_fa_ship">&#xf21a;</string>
+    <!-- Copy to use shirtsinbulk -->
+    <string name="ELCFont_fa_shirtsinbulk">&#xf214;</string>
+    <!-- Copy to use shopping_bag -->
+    <string name="ELCFont_fa_shopping_bag">&#xf290;</string>
+    <!-- Copy to use shopping_basket -->
+    <string name="ELCFont_fa_shopping_basket">&#xf291;</string>
+    <!-- Copy to use shopping_cart -->
+    <string name="ELCFont_fa_shopping_cart">&#xf07a;</string>
+    <!-- Copy to use sign_in -->
+    <string name="ELCFont_fa_sign_in">&#xf090;</string>
+    <!-- Copy to use sign_language -->
+    <string name="ELCFont_fa_sign_language">&#xf2a7;</string>
+    <!-- Copy to use sign_out -->
+    <string name="ELCFont_fa_sign_out">&#xf08b;</string>
+    <!-- Copy to use signal -->
+    <string name="ELCFont_fa_signal">&#xf012;</string>
+    <!-- Copy to use signing -->
+    <string name="ELCFont_fa_signing">&#xf2a7;</string>
+    <!-- Copy to use simplybuilt -->
+    <string name="ELCFont_fa_simplybuilt">&#xf215;</string>
+    <!-- Copy to use sitemap -->
+    <string name="ELCFont_fa_sitemap">&#xf0e8;</string>
+    <!-- Copy to use skyatlas -->
+    <string name="ELCFont_fa_skyatlas">&#xf216;</string>
+    <!-- Copy to use skype -->
+    <string name="ELCFont_fa_skype">&#xf17e;</string>
+    <!-- Copy to use slack -->
+    <string name="ELCFont_fa_slack">&#xf198;</string>
+    <!-- Copy to use sliders -->
+    <string name="ELCFont_fa_sliders">&#xf1de;</string>
+    <!-- Copy to use slideshare -->
+    <string name="ELCFont_fa_slideshare">&#xf1e7;</string>
+    <!-- Copy to use smile_o -->
+    <string name="ELCFont_fa_smile_o">&#xf118;</string>
+    <!-- Copy to use snapchat -->
+    <string name="ELCFont_fa_snapchat">&#xf2ab;</string>
+    <!-- Copy to use snapchat_ghost -->
+    <string name="ELCFont_fa_snapchat_ghost">&#xf2ac;</string>
+    <!-- Copy to use snapchat_square -->
+    <string name="ELCFont_fa_snapchat_square">&#xf2ad;</string>
+    <!-- Copy to use soccer_ball_o -->
+    <string name="ELCFont_fa_soccer_ball_o">&#xf1e3;</string>
+    <!-- Copy to use sort -->
+    <string name="ELCFont_fa_sort">&#xf0dc;</string>
+    <!-- Copy to use sort_alpha_asc -->
+    <string name="ELCFont_fa_sort_alpha_asc">&#xf15d;</string>
+    <!-- Copy to use sort_alpha_desc -->
+    <string name="ELCFont_fa_sort_alpha_desc">&#xf15e;</string>
+    <!-- Copy to use sort_amount_asc -->
+    <string name="ELCFont_fa_sort_amount_asc">&#xf160;</string>
+    <!-- Copy to use sort_amount_desc -->
+    <string name="ELCFont_fa_sort_amount_desc">&#xf161;</string>
+    <!-- Copy to use sort_asc -->
+    <string name="ELCFont_fa_sort_asc">&#xf0de;</string>
+    <!-- Copy to use sort_desc -->
+    <string name="ELCFont_fa_sort_desc">&#xf0dd;</string>
+    <!-- Copy to use sort_down -->
+    <string name="ELCFont_fa_sort_down">&#xf0dd;</string>
+    <!-- Copy to use sort_numeric_asc -->
+    <string name="ELCFont_fa_sort_numeric_asc">&#xf162;</string>
+    <!-- Copy to use sort_numeric_desc -->
+    <string name="ELCFont_fa_sort_numeric_desc">&#xf163;</string>
+    <!-- Copy to use sort_up -->
+    <string name="ELCFont_fa_sort_up">&#xf0de;</string>
+    <!-- Copy to use soundcloud -->
+    <string name="ELCFont_fa_soundcloud">&#xf1be;</string>
+    <!-- Copy to use space_shuttle -->
+    <string name="ELCFont_fa_space_shuttle">&#xf197;</string>
+    <!-- Copy to use spinner -->
+    <string name="ELCFont_fa_spinner">&#xf110;</string>
+    <!-- Copy to use spoon -->
+    <string name="ELCFont_fa_spoon">&#xf1b1;</string>
+    <!-- Copy to use spotify -->
+    <string name="ELCFont_fa_spotify">&#xf1bc;</string>
+    <!-- Copy to use square -->
+    <string name="ELCFont_fa_square">&#xf0c8;</string>
+    <!-- Copy to use square_o -->
+    <string name="ELCFont_fa_square_o">&#xf096;</string>
+    <!-- Copy to use stack_exchange -->
+    <string name="ELCFont_fa_stack_exchange">&#xf18d;</string>
+    <!-- Copy to use stack_overflow -->
+    <string name="ELCFont_fa_stack_overflow">&#xf16c;</string>
+    <!-- Copy to use star -->
+    <string name="ELCFont_fa_star">&#xf005;</string>
+    <!-- Copy to use star_half -->
+    <string name="ELCFont_fa_star_half">&#xf089;</string>
+    <!-- Copy to use star_half_empty -->
+    <string name="ELCFont_fa_star_half_empty">&#xf123;</string>
+    <!-- Copy to use star_half_full -->
+    <string name="ELCFont_fa_star_half_full">&#xf123;</string>
+    <!-- Copy to use star_half_o -->
+    <string name="ELCFont_fa_star_half_o">&#xf123;</string>
+    <!-- Copy to use star_o -->
+    <string name="ELCFont_fa_star_o">&#xf006;</string>
+    <!-- Copy to use steam -->
+    <string name="ELCFont_fa_steam">&#xf1b6;</string>
+    <!-- Copy to use steam_square -->
+    <string name="ELCFont_fa_steam_square">&#xf1b7;</string>
+    <!-- Copy to use step_backward -->
+    <string name="ELCFont_fa_step_backward">&#xf048;</string>
+    <!-- Copy to use step_forward -->
+    <string name="ELCFont_fa_step_forward">&#xf051;</string>
+    <!-- Copy to use stethoscope -->
+    <string name="ELCFont_fa_stethoscope">&#xf0f1;</string>
+    <!-- Copy to use sticky_note -->
+    <string name="ELCFont_fa_sticky_note">&#xf249;</string>
+    <!-- Copy to use sticky_note_o -->
+    <string name="ELCFont_fa_sticky_note_o">&#xf24a;</string>
+    <!-- Copy to use stop -->
+    <string name="ELCFont_fa_stop">&#xf04d;</string>
+    <!-- Copy to use stop_circle -->
+    <string name="ELCFont_fa_stop_circle">&#xf28d;</string>
+    <!-- Copy to use stop_circle_o -->
+    <string name="ELCFont_fa_stop_circle_o">&#xf28e;</string>
+    <!-- Copy to use street_view -->
+    <string name="ELCFont_fa_street_view">&#xf21d;</string>
+    <!-- Copy to use strikethrough -->
+    <string name="ELCFont_fa_strikethrough">&#xf0cc;</string>
+    <!-- Copy to use stumbleupon -->
+    <string name="ELCFont_fa_stumbleupon">&#xf1a4;</string>
+    <!-- Copy to use stumbleupon_circle -->
+    <string name="ELCFont_fa_stumbleupon_circle">&#xf1a3;</string>
+    <!-- Copy to use subscript -->
+    <string name="ELCFont_fa_subscript">&#xf12c;</string>
+    <!-- Copy to use subway -->
+    <string name="ELCFont_fa_subway">&#xf239;</string>
+    <!-- Copy to use suitcase -->
+    <string name="ELCFont_fa_suitcase">&#xf0f2;</string>
+    <!-- Copy to use sun_o -->
+    <string name="ELCFont_fa_sun_o">&#xf185;</string>
+    <!-- Copy to use superscript -->
+    <string name="ELCFont_fa_superscript">&#xf12b;</string>
+    <!-- Copy to use support -->
+    <string name="ELCFont_fa_support">&#xf1cd;</string>
+    <!-- Copy to use table -->
+    <string name="ELCFont_fa_table">&#xf0ce;</string>
+    <!-- Copy to use tablet -->
+    <string name="ELCFont_fa_tablet">&#xf10a;</string>
+    <!-- Copy to use tachometer -->
+    <string name="ELCFont_fa_tachometer">&#xf0e4;</string>
+    <!-- Copy to use tag -->
+    <string name="ELCFont_fa_tag">&#xf02b;</string>
+    <!-- Copy to use tags -->
+    <string name="ELCFont_fa_tags">&#xf02c;</string>
+    <!-- Copy to use tasks -->
+    <string name="ELCFont_fa_tasks">&#xf0ae;</string>
+    <!-- Copy to use taxi -->
+    <string name="ELCFont_fa_taxi">&#xf1ba;</string>
+    <!-- Copy to use television -->
+    <string name="ELCFont_fa_television">&#xf26c;</string>
+    <!-- Copy to use tencent_weibo -->
+    <string name="ELCFont_fa_tencent_weibo">&#xf1d5;</string>
+    <!-- Copy to use terminal -->
+    <string name="ELCFont_fa_terminal">&#xf120;</string>
+    <!-- Copy to use text_height -->
+    <string name="ELCFont_fa_text_height">&#xf034;</string>
+    <!-- Copy to use text_width -->
+    <string name="ELCFont_fa_text_width">&#xf035;</string>
+    <!-- Copy to use th -->
+    <string name="ELCFont_fa_th">&#xf00a;</string>
+    <!-- Copy to use th_large -->
+    <string name="ELCFont_fa_th_large">&#xf009;</string>
+    <!-- Copy to use th_list -->
+    <string name="ELCFont_fa_th_list">&#xf00b;</string>
+    <!-- Copy to use themeisle -->
+    <string name="ELCFont_fa_themeisle">&#xf2b2;</string>
+    <!-- Copy to use thumb_tack -->
+    <string name="ELCFont_fa_thumb_tack">&#xf08d;</string>
+    <!-- Copy to use thumbs_down -->
+    <string name="ELCFont_fa_thumbs_down">&#xf165;</string>
+    <!-- Copy to use thumbs_o_down -->
+    <string name="ELCFont_fa_thumbs_o_down">&#xf088;</string>
+    <!-- Copy to use thumbs_o_up -->
+    <string name="ELCFont_fa_thumbs_o_up">&#xf087;</string>
+    <!-- Copy to use thumbs_up -->
+    <string name="ELCFont_fa_thumbs_up">&#xf164;</string>
+    <!-- Copy to use ticket -->
+    <string name="ELCFont_fa_ticket">&#xf145;</string>
+    <!-- Copy to use times -->
+    <string name="ELCFont_fa_times">&#xf00d;</string>
+    <!-- Copy to use times_circle -->
+    <string name="ELCFont_fa_times_circle">&#xf057;</string>
+    <!-- Copy to use times_circle_o -->
+    <string name="ELCFont_fa_times_circle_o">&#xf05c;</string>
+    <!-- Copy to use tint -->
+    <string name="ELCFont_fa_tint">&#xf043;</string>
+    <!-- Copy to use toggle_down -->
+    <string name="ELCFont_fa_toggle_down">&#xf150;</string>
+    <!-- Copy to use toggle_left -->
+    <string name="ELCFont_fa_toggle_left">&#xf191;</string>
+    <!-- Copy to use toggle_off -->
+    <string name="ELCFont_fa_toggle_off">&#xf204;</string>
+    <!-- Copy to use toggle_on -->
+    <string name="ELCFont_fa_toggle_on">&#xf205;</string>
+    <!-- Copy to use toggle_right -->
+    <string name="ELCFont_fa_toggle_right">&#xf152;</string>
+    <!-- Copy to use toggle_up -->
+    <string name="ELCFont_fa_toggle_up">&#xf151;</string>
+    <!-- Copy to use trademark -->
+    <string name="ELCFont_fa_trademark">&#xf25c;</string>
+    <!-- Copy to use train -->
+    <string name="ELCFont_fa_train">&#xf238;</string>
+    <!-- Copy to use transgender -->
+    <string name="ELCFont_fa_transgender">&#xf224;</string>
+    <!-- Copy to use transgender_alt -->
+    <string name="ELCFont_fa_transgender_alt">&#xf225;</string>
+    <!-- Copy to use trash -->
+    <string name="ELCFont_fa_trash">&#xf1f8;</string>
+    <!-- Copy to use trash_o -->
+    <string name="ELCFont_fa_trash_o">&#xf014;</string>
+    <!-- Copy to use tree -->
+    <string name="ELCFont_fa_tree">&#xf1bb;</string>
+    <!-- Copy to use trello -->
+    <string name="ELCFont_fa_trello">&#xf181;</string>
+    <!-- Copy to use tripadvisor -->
+    <string name="ELCFont_fa_tripadvisor">&#xf262;</string>
+    <!-- Copy to use trophy -->
+    <string name="ELCFont_fa_trophy">&#xf091;</string>
+    <!-- Copy to use truck -->
+    <string name="ELCFont_fa_truck">&#xf0d1;</string>
+    <!-- Copy to use try -->
+    <string name="ELCFont_fa_try">&#xf195;</string>
+    <!-- Copy to use tty -->
+    <string name="ELCFont_fa_tty">&#xf1e4;</string>
+    <!-- Copy to use tumblr -->
+    <string name="ELCFont_fa_tumblr">&#xf173;</string>
+    <!-- Copy to use tumblr_square -->
+    <string name="ELCFont_fa_tumblr_square">&#xf174;</string>
+    <!-- Copy to use turkish_lira -->
+    <string name="ELCFont_fa_turkish_lira">&#xf195;</string>
+    <!-- Copy to use tv -->
+    <string name="ELCFont_fa_tv">&#xf26c;</string>
+    <!-- Copy to use twitch -->
+    <string name="ELCFont_fa_twitch">&#xf1e8;</string>
+    <!-- Copy to use twitter -->
+    <string name="ELCFont_fa_twitter">&#xf099;</string>
+    <!-- Copy to use twitter_square -->
+    <string name="ELCFont_fa_twitter_square">&#xf081;</string>
+    <!-- Copy to use umbrella -->
+    <string name="ELCFont_fa_umbrella">&#xf0e9;</string>
+    <!-- Copy to use underline -->
+    <string name="ELCFont_fa_underline">&#xf0cd;</string>
+    <!-- Copy to use undo -->
+    <string name="ELCFont_fa_undo">&#xf0e2;</string>
+    <!-- Copy to use universal_access -->
+    <string name="ELCFont_fa_universal_access">&#xf29a;</string>
+    <!-- Copy to use university -->
+    <string name="ELCFont_fa_university">&#xf19c;</string>
+    <!-- Copy to use unlink -->
+    <string name="ELCFont_fa_unlink">&#xf127;</string>
+    <!-- Copy to use unlock -->
+    <string name="ELCFont_fa_unlock">&#xf09c;</string>
+    <!-- Copy to use unlock_alt -->
+    <string name="ELCFont_fa_unlock_alt">&#xf13e;</string>
+    <!-- Copy to use unsorted -->
+    <string name="ELCFont_fa_unsorted">&#xf0dc;</string>
+    <!-- Copy to use upload -->
+    <string name="ELCFont_fa_upload">&#xf093;</string>
+    <!-- Copy to use usb -->
+    <string name="ELCFont_fa_usb">&#xf287;</string>
+    <!-- Copy to use usd -->
+    <string name="ELCFont_fa_usd">&#xf155;</string>
+    <!-- Copy to use user -->
+    <string name="ELCFont_fa_user">&#xf007;</string>
+    <!-- Copy to use user_md -->
+    <string name="ELCFont_fa_user_md">&#xf0f0;</string>
+    <!-- Copy to use user_plus -->
+    <string name="ELCFont_fa_user_plus">&#xf234;</string>
+    <!-- Copy to use user_secret -->
+    <string name="ELCFont_fa_user_secret">&#xf21b;</string>
+    <!-- Copy to use user_times -->
+    <string name="ELCFont_fa_user_times">&#xf235;</string>
+    <!-- Copy to use users -->
+    <string name="ELCFont_fa_users">&#xf0c0;</string>
+    <!-- Copy to use venus -->
+    <string name="ELCFont_fa_venus">&#xf221;</string>
+    <!-- Copy to use venus_double -->
+    <string name="ELCFont_fa_venus_double">&#xf226;</string>
+    <!-- Copy to use venus_mars -->
+    <string name="ELCFont_fa_venus_mars">&#xf228;</string>
+    <!-- Copy to use viacoin -->
+    <string name="ELCFont_fa_viacoin">&#xf237;</string>
+    <!-- Copy to use viadeo -->
+    <string name="ELCFont_fa_viadeo">&#xf2a9;</string>
+    <!-- Copy to use viadeo_square -->
+    <string name="ELCFont_fa_viadeo_square">&#xf2aa;</string>
+    <!-- Copy to use video_camera -->
+    <string name="ELCFont_fa_video_camera">&#xf03d;</string>
+    <!-- Copy to use vimeo -->
+    <string name="ELCFont_fa_vimeo">&#xf27d;</string>
+    <!-- Copy to use vimeo_square -->
+    <string name="ELCFont_fa_vimeo_square">&#xf194;</string>
+    <!-- Copy to use vine -->
+    <string name="ELCFont_fa_vine">&#xf1ca;</string>
+    <!-- Copy to use vk -->
+    <string name="ELCFont_fa_vk">&#xf189;</string>
+    <!-- Copy to use volume_control_phone -->
+    <string name="ELCFont_fa_volume_control_phone">&#xf2a0;</string>
+    <!-- Copy to use volume_down -->
+    <string name="ELCFont_fa_volume_down">&#xf027;</string>
+    <!-- Copy to use volume_off -->
+    <string name="ELCFont_fa_volume_off">&#xf026;</string>
+    <!-- Copy to use volume_up -->
+    <string name="ELCFont_fa_volume_up">&#xf028;</string>
+    <!-- Copy to use warning -->
+    <string name="ELCFont_fa_warning">&#xf071;</string>
+    <!-- Copy to use wechat -->
+    <string name="ELCFont_fa_wechat">&#xf1d7;</string>
+    <!-- Copy to use weibo -->
+    <string name="ELCFont_fa_weibo">&#xf18a;</string>
+    <!-- Copy to use weixin -->
+    <string name="ELCFont_fa_weixin">&#xf1d7;</string>
+    <!-- Copy to use whatsapp -->
+    <string name="ELCFont_fa_whatsapp">&#xf232;</string>
+    <!-- Copy to use wheelchair -->
+    <string name="ELCFont_fa_wheelchair">&#xf193;</string>
+    <!-- Copy to use wheelchair_alt -->
+    <string name="ELCFont_fa_wheelchair_alt">&#xf29b;</string>
+    <!-- Copy to use wifi -->
+    <string name="ELCFont_fa_wifi">&#xf1eb;</string>
+    <!-- Copy to use wikipedia_w -->
+    <string name="ELCFont_fa_wikipedia_w">&#xf266;</string>
+    <!-- Copy to use windows -->
+    <string name="ELCFont_fa_windows">&#xf17a;</string>
+    <!-- Copy to use won -->
+    <string name="ELCFont_fa_won">&#xf159;</string>
+    <!-- Copy to use wordpress -->
+    <string name="ELCFont_fa_wordpress">&#xf19a;</string>
+    <!-- Copy to use wpbeginner -->
+    <string name="ELCFont_fa_wpbeginner">&#xf297;</string>
+    <!-- Copy to use wpforms -->
+    <string name="ELCFont_fa_wpforms">&#xf298;</string>
+    <!-- Copy to use wrench -->
+    <string name="ELCFont_fa_wrench">&#xf0ad;</string>
+    <!-- Copy to use xing -->
+    <string name="ELCFont_fa_xing">&#xf168;</string>
+    <!-- Copy to use xing_square -->
+    <string name="ELCFont_fa_xing_square">&#xf169;</string>
+    <!-- Copy to use y_combinator -->
+    <string name="ELCFont_fa_y_combinator">&#xf23b;</string>
+    <!-- Copy to use y_combinator_square -->
+    <string name="ELCFont_fa_y_combinator_square">&#xf1d4;</string>
+    <!-- Copy to use yahoo -->
+    <string name="ELCFont_fa_yahoo">&#xf19e;</string>
+    <!-- Copy to use yc -->
+    <string name="ELCFont_fa_yc">&#xf23b;</string>
+    <!-- Copy to use yc_square -->
+    <string name="ELCFont_fa_yc_square">&#xf1d4;</string>
+    <!-- Copy to use yelp -->
+    <string name="ELCFont_fa_yelp">&#xf1e9;</string>
+    <!-- Copy to use yen -->
+    <string name="ELCFont_fa_yen">&#xf157;</string>
+    <!-- Copy to use yoast -->
+    <string name="ELCFont_fa_yoast">&#xf2b1;</string>
+    <!-- Copy to use youtube -->
+    <string name="ELCFont_fa_youtube">&#xf167;</string>
+    <!-- Copy to use youtube_play -->
+    <string name="ELCFont_fa_youtube_play">&#xf16a;</string>
+    <!-- Copy to use youtube_square -->
+    <string name="ELCFont_fa_youtube_square">&#xf166;</string>
+
+
+
+
+
+
+
+
+
+
 </resources>

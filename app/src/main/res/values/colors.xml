@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="ELCColorBlak">#000000</color>
     <color name="ELCColorClear">#00ffffff</color>
+    <color name="ELCColorWhite">#ffffff</color>
+    <color name="ELCColorBackWhite">#cecece</color>
+    <color name="ELCColorBack2White">#d3d3d3</color>
+    <color name="ELCColorBlackSubtitle">#313131</color>
+    <color name="ELCColorBTNBlackDes">#b2b2b2</color>
 </resources>

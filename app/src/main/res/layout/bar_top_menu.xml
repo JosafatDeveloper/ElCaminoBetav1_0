@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="40dp"
+    android:background="@color/ELCColorBlak">
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="@string/ELCIcon_routeab"
+        android:id="@+id/bar_btn_ruta"
+        android:background="@color/ELCColorClear"
+        android:textSize="38sp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bar_btn_search"
+        android:layout_toStartOf="@+id/bar_btn_search"
+        android:onClick="sendMenuClick"
+        android:tag="1" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="@string/ELCIcon_search"
+        android:id="@+id/bar_btn_search"
+        android:background="@color/ELCColorClear"
+        android:textSize="38sp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bar_btn_messenger"
+        android:layout_toStartOf="@+id/bar_btn_messenger"
+        android:tag="2"
+        android:onClick="sendMenuClick" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="@string/ELCIcon_comments"
+        android:id="@+id/bar_btn_messenger"
+        android:background="@color/ELCColorClear"
+        android:textSize="38sp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bar_btn_ajustes"
+        android:layout_toStartOf="@+id/bar_btn_ajustes"
+        android:tag="3"
+        android:onClick="sendMenuClick" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="@string/ELCIcon_cog"
+        android:id="@+id/bar_btn_ajustes"
+        android:background="@color/ELCColorClear"
+        android:textSize="38sp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bar_btn_account"
+        android:layout_toStartOf="@+id/bar_btn_account"
+        android:tag="4"
+        android:onClick="sendMenuClick" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:text="@string/ELCIcon_usercircle"
+        android:id="@+id/bar_btn_account"
+        android:background="@color/ELCColorClear"
+        android:textSize="38sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"
+        android:tag="5"
+        android:onClick="sendMenuClick" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:id="@+id/bar_btn_home"
+        android:src="@drawable/app_logo_full"
+        android:scaleType="centerCrop"
+        android:background="@color/ELCColorClear"
+        android:maxWidth="60dp"
+        android:minWidth="40dp"
+        android:onClick="returnHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp" />
+</RelativeLayout>

@@ -10,4 +10,7 @@
     <color name="ELCColorBack2White">#d3d3d3</color>
     <color name="ELCColorBlackSubtitle">#313131</color>
     <color name="ELCColorBTNBlackDes">#b2b2b2</color>
+    <color name="ELCColorEstrellaAct">#f0e400</color>
+    <color name="ELCColorEstrellaSombra">#585858</color>
+    <color name="ELCColorSendView">#6a6a6a</color>
 </resources>

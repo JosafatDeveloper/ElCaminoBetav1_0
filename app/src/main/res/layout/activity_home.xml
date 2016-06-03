@@ -9,66 +9,6 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/linearLayout"
-        android:background="@color/ELCColorBlak">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/app_logo_full" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:text="@string/ELCIcon_routeab"
-            android:id="@+id/bar_btn_ruta"
-            android:background="@color/ELCColorClear"
-            android:textSize="38sp"
-            android:layout_marginLeft="-225dp"
-            android:textAlignment="center" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:text="@string/ELCIcon_search"
-            android:id="@+id/bar_btn_account"
-            android:background="@color/ELCColorClear"
-            android:textSize="38sp" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:text="@string/ELCIcon_comments"
-            android:id="@+id/bar_btn_search"
-            android:background="@color/ELCColorClear"
-            android:textSize="38sp" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:text="@string/ELCIcon_cog"
-            android:id="@+id/bar_btn_messenger"
-            android:background="@color/ELCColorClear"
-            android:textSize="38sp" />
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="40dp"
-            android:text="@string/ELCIcon_usercircle"
-            android:id="@+id/bar_btn_ajustes"
-            android:background="@color/ELCColorClear"
-            android:textSize="38sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -85,7 +25,8 @@
             android:id="@+id/home_btn_b1"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="1" />
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -93,7 +34,8 @@
             android:id="@+id/home_btn_b2"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="2" />
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -101,7 +43,8 @@
             android:id="@+id/home_btn_b3"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="3" />
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -109,7 +52,8 @@
             android:id="@+id/home_btn_b4"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="4" />
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -117,7 +61,8 @@
             android:id="@+id/home_btn_b5"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="5" />
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -125,17 +70,19 @@
             android:id="@+id/home_btn_b6"
             android:background="@color/ELCColorClear"
             android:textSize="45dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:tag="6" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bar_top_status_gps_ligth"
-        android:id="@+id/linearLayout2">
+        android:background="@drawable/row_activity_ligth"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/include"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -169,11 +116,13 @@
                 android:text="Casa"
                 android:id="@+id/textView10"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/home_bar_status_routr_s1"
                 android:layout_toEndOf="@+id/home_bar_status_routr_s1"
                 android:textColor="@color/ELCColorBlak"
                 android:textSize="20dp"
-                android:paddingLeft="5dp" />
+                android:paddingLeft="5dp"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentBottom="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -181,7 +130,6 @@
                 android:text="RECORRIDO"
                 android:id="@+id/textView11"
                 android:layout_below="@+id/textView10"
-                android:layout_toRightOf="@+id/home_bar_status_routr_s1"
                 android:layout_toEndOf="@+id/home_bar_status_routr_s1"
                 android:textColor="@color/ELCColorBlackSubtitle"
                 android:paddingLeft="5dp"
@@ -222,6 +170,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/ELCColorBTNBlackDes"
                 android:textSize="44dp" />
+
         </RelativeLayout>
     </LinearLayout>
 
@@ -232,7 +181,14 @@
         android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/linearLayoutMenuHomeBarBot" />
+        android:layout_above="@+id/linearLayoutMenuHomeBarBot"
+        android:layout_alignParentTop="false" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        layout="@layout/bar_top_menu"
+        android:id="@+id/include" />
 
 
 </RelativeLayout>

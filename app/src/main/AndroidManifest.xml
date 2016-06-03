@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.onlinesellers.elcaminobeta10">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +36,46 @@
         <activity android:name=".RegistroNuevoS7Activity" />
         <activity android:name=".RegistroNuevoS8Activity" />
         <activity android:name=".RegistroNuevoS9Activity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".UserMessengerActivity" />
+        <activity android:name=".PublicidadViewActivity" />
+        <activity android:name=".UserMessengerChatActivity" />
+        <activity android:name=".DestinosActivity" />
+        <activity android:name=".RescueProveActivity" />
+        <activity android:name=".AsistenciaTelActivity" />
+        <activity android:name=".CentroServicioActivity" />
+        <activity android:name=".TiendasActivity" />
+        <activity android:name=".RidersActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsVIewElementActivity"
+            android:label="@string/title_activity_maps_view_element" />
+        <activity android:name=".PlayRoutrLookActivity" />
+        <activity android:name=".RoutesActivity" />
+        <activity android:name=".UserMessengerGroupActivity" />
+        <activity android:name=".UserMessengerMCActivity" />
+        <activity android:name=".UserPerfilActivity" />
+        <activity
+            android:name=".UserPerfilContactEmeActivity"
+            android:label="@string/title_activity_user_perfil_contact_eme"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".UserPerfilMotosActivity" />
+        <activity android:name=".DeveloperUserNewActivity" />
+
+        <service android:name=".ELCEXTRAS.ELCFunciones" />
+
+        <activity android:name=".DestinosSelectActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/ELCColorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:id="@+id/row_text_title"
+            android:textColor="@color/ELCColorBlak"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:autoText="false"
+            android:longClickable="false"
+            android:linksClickable="false"
+            android:maxLines="1"
+            android:scrollHorizontally="false"
+            android:paddingRight="100dp"
+            android:layout_alignTop="@+id/row_image_moto"
+            android:layout_toRightOf="@+id/row_image_moto"
+            android:layout_toEndOf="@+id/row_image_moto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción de la Actividad. "
+            android:id="@+id/row_text_describe"
+            android:textColor="@color/ELCColorBlackSubtitle"
+            android:singleLine="false"
+            android:paddingRight="50dp"
+            android:layout_below="@+id/row_text_title"
+            android:layout_alignLeft="@+id/row_text_title"
+            android:layout_alignStart="@+id/row_text_title"
+            android:layout_toLeftOf="@+id/row_image_logo"
+            android:layout_toStartOf="@+id/row_image_logo"
+            android:layout_alignBottom="@+id/row_image_moto" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:id="@+id/row_image_moto"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:id="@+id/row_image_logo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

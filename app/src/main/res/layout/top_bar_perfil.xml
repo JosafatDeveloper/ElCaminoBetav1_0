@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/ELCColorWhite"
+    android:id="@+id/relativeLayout"
+    android:layout_below="@+id/include10"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="@string/ELCIcon_infocircle"
+        android:id="@+id/TabManagerS1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ELCColorClear"
+        android:textColor="@color/ELCColorBTNBlackDes"
+        android:textSize="54sp"
+        android:tag="1"
+        android:onClick="ClickTabManager" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="@string/ELCIcon_ambulancestandar"
+        android:id="@+id/TabManagerS2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/TabManagerS1"
+        android:layout_toEndOf="@+id/TabManagerS1"
+        android:textSize="54sp"
+        android:textColor="@color/ELCColorBTNBlackDes"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ELCColorClear"
+        android:tag="2"
+        android:onClick="ClickTabManager" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="@string/ELCIcon_motoestandar"
+        android:id="@+id/TabManagerS3"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/TabManagerS2"
+        android:layout_toEndOf="@+id/TabManagerS2"
+        android:textColor="@color/ELCColorBTNBlackDes"
+        android:textSize="54sp"
+        android:background="@color/ELCColorClear"
+        android:layout_marginLeft="10dp"
+        android:tag="3"
+        android:onClick="ClickTabManager" />
+</RelativeLayout>

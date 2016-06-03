@@ -24,6 +24,17 @@
     <string name="ELCIcon_margeninter">&#xf018;</string>
     <string name="ELCIcon_margen">&#xf019;</string>
     <string name="ELCIcon_telephonecircle">&#xf020;</string>
+    <string name="ELCIcon_estrellanull">&#xf021;</string>
+    <string name="ELCIcon_estrellafill">&#xf022;</string>
+    <string name="ELCIcon_pointgps">&#xf023;</string>
+    <string name="ELCIcon_msnbase">&#xf024;</string>
+    <string name="ELCIcon_msnuser">&#xf025;</string>
+    <string name="ELCIcon_msngroup">&#xf026;</string>
+    <string name="ELCIcon_msnmc">&#xf027;</string>
+    <string name="ELCIcon_motoestandar">&#xf028;</string>
+    <string name="ELCIcon_sendview">&#xf029;</string>
+    <string name="ELCIcon_plus">&#xf030;</string>
+
 
     <!-- Font Manager String Icon -->
     <!-- Copy to use 500px -->
@@ -1478,14 +1489,9 @@
     <string name="ELCFont_fa_youtube_play">&#xf16a;</string>
     <!-- Copy to use youtube_square -->
     <string name="ELCFont_fa_youtube_square">&#xf166;</string>
-
-
-
-
-
-
-
-
+    <string name="title_activity_asistencia_tel">AsistenciaTelActivity</string>
+    <string name="title_activity_maps_view_element">Map</string>
+    <string name="title_activity_user_perfil_contact_eme">UserPerfilContactEmeActivity</string>
 
 
 </resources>

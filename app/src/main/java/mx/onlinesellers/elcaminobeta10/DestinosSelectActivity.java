@@ -36,6 +36,7 @@ public class DestinosSelectActivity extends AppCompatActivity implements Adapter
             btn_add_new = (Button) findViewById(R.id.destinos_add_viaje);
             btn_add_new.setText("+ Agregar recorrido a "+extras.getString("t"));
             IDROUTE = (int) extras.getLong("idR");
+            Log.d("LOGMA", "ID:"+IDROUTE);
         }
         configureBarMenu();
         listViewActivity = (ListView) findViewById(R.id.listView);
@@ -71,12 +72,9 @@ public class DestinosSelectActivity extends AppCompatActivity implements Adapter
 
     public void createActivityList(){
         dataSource = new ManagerSQLite(this);
-        Cursor cursor = dataSource.getAllTrackInfo();
+        Cursor cursor = dataSource.getAllTrackInfo(IDROUTE);
         adapter = new AdpaterRowsActivityS7(this, cursor, 0);
         listViewActivity.setAdapter(adapter);
-
-
-
     }
 
     @Override

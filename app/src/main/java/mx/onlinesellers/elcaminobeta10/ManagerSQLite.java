@@ -199,6 +199,13 @@ public class ManagerSQLite {
                         " where "+ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE+" = "+ROUTES_TABLE_NAME+"."+ColumnRoutes.ID_ROUTE+
                         " order by datetime(\""+ColumnRoutesTrack.MODIFY_TRACK+"\") DESC", null);
     }
+    public Cursor getAllTrackInfo(int id_route){
+        return database.rawQuery(
+                "select "+
+                        " * from "+
+                        ROUTE_TRACK_TABLE_NAME+
+                        " where "+ColumnRoutesTrack.ID_ROUTE+" = "+id_route, null);
+    }
 
     public Cursor getTrackInfo(int id_track){
         return database.rawQuery(
@@ -207,6 +214,8 @@ public class ManagerSQLite {
                         ROUTE_TRACK_TABLE_NAME+
                         " where "+ColumnRoutesTrack.ID_ROUTE_TRACK+" = "+id_track, null);
     }
+
+
 
     public Cursor getAllPointTrack(int id_track){
         return database.rawQuery(

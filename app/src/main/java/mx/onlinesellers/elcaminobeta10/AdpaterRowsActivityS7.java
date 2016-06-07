@@ -30,7 +30,7 @@ public class AdpaterRowsActivityS7 extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         TextView title = (TextView) view.findViewById(R.id.row_text_title);
-        title.setText(cursor.getString(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnOther.NAME_TRACK_AND_NAME_ROUTE)));
+        title.setText(cursor.getString(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.ROUTE_TRACK_NAME)));
         TextView describe = (TextView) view.findViewById(R.id.row_text_describe);
         describe.setText(cursor.getString(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.MODIFY_TRACK)));
 

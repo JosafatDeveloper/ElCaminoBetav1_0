@@ -82,8 +82,6 @@ public class MapsVIewElementActivity extends FragmentActivity implements OnMapRe
         Intent intent = new Intent(this, HomeActivity.class);
         this.startActivity(intent);
     }
-
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -96,7 +94,6 @@ public class MapsVIewElementActivity extends FragmentActivity implements OnMapRe
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         // Add a marker in Sydney and move the camera
         LatLng sydney = (LatLng) itemSend.get("c");
         mMap.addMarker(new MarkerOptions().position(sydney).title((String)itemSend.get("t")));

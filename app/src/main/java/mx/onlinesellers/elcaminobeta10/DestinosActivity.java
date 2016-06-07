@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -83,15 +84,6 @@ public class DestinosActivity extends AppCompatActivity implements AdapterView.O
         intent.putExtra("t", title.getText().toString());
         intent.putExtra("idR", id);
         this.startActivity(intent);
-        /*
-        Intent intent = new Intent(this, MapsVIewElementActivity.class);
-        intent.putExtra("t","Ruta a "+listAdapterActivity.get(position).get("t"));
-        intent.putExtra("i",getResources().getString(R.string.ELCIcon_locationarrow));
-        Map<String, Object> ItemSend = listAdapterActivity.get(position);
-        intent.putExtra("d", (Serializable) ItemSend);
-        intent.putExtra("a", true);
-        this.startActivity(intent);
-        */
     }
 
     public void clickAddDestino(View v){

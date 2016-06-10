@@ -1,31 +1,29 @@
 package mx.onlinesellers.elcaminobeta10;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Typeface;
 import android.location.Location;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.PolylineOptions;
-
-import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCFunciones;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCGPS;
 
-public class PlayRoutrLookActivity extends AppCompatActivity {
+public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnClickListener {
 
     public Button acti_sA_btn;
     public Button acti_sB_btn;
@@ -48,12 +46,9 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
     public boolean pause_timer; // Timer pause
     public String new_route;
     // Btn activity
-    Button btn_activity;
-    Button btn_stop;
     TextView text_distancia;
     TextView text_timer;
     TextView text_velocidad;
-    TextView text_log;
     // Services
     ELCFunciones elcFunciones;
     ELCGPS MAGPSManager;
@@ -76,6 +71,8 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
     private ManagerSQLite dataSource;
 
     public int id_last_location;
+
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +100,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
         // New vars
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            acti_titulo.setText(extras.getString("t")+", "+extras.getString("NAME_TRACK"));
+            acti_titulo.setText(extras.getString("NAME_TRACK"));
             acti_describe.setText(extras.getString("m"));
             new_route = extras.getString("NAME_TRACK");
             track_id = extras.getInt("TRACK_ID");
@@ -115,7 +112,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
         }
 
         // Load track BD
-        Cursor trackIDInfo = dataSource.getTrackInfo(track_id);
+        Cursor trackIDInfo = dataSource.getTrackInfo(track_id, false);
         if (trackIDInfo != null) {
             while(trackIDInfo.moveToNext()) {
                 velocidad_maxima = trackIDInfo.getFloat(trackIDInfo.getColumnIndex(ManagerSQLite.ColumnRoutesTrack.MAX_VELOCITY));
@@ -139,20 +136,62 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
 
 
         // Configuracion
-        btn_activity = (Button) findViewById(R.id.map_btn_activity);
-        btn_activity.setOnClickListener(this);
-        btn_activity.setTag(1);
-        btn_stop = (Button) findViewById(R.id.map_btn_stop);
-        btn_stop.setOnClickListener(this);
-        text_distancia = (TextView) findViewById(R.id.map_text_distancia);
-        text_timer = (TextView) findViewById(R.id.map_text_timer);
-        text_log = (TextView) findViewById(R.id.log);
+        acti_sA_btn.setOnClickListener(this);
+        acti_sA_btn.setTag(1);
+        acti_sB_btn.setOnClickListener(this);
+        text_distancia = (TextView) findViewById(R.id.map_distancia);
+        text_timer = (TextView) findViewById(R.id.map_timer);
         text_velocidad = (TextView) findViewById(R.id.map_text_velocidad);
         timer_clock = new Timer();
+
+
+        int hasWriteGPSPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS);
+        if (hasWriteGPSPermission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS},
+                    REQUEST_CODE_ASK_PERMISSIONS);
+            return;
+        }
+
+
+
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        1);
+            }
+        }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        1);
+            }
+        }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS},
+                        1);
+            }
+        }
+
         // Load Servicios
         elcFunciones = new ELCFunciones(getApplicationContext());
         MAGPSManager = new ELCGPS(getApplicationContext());
-        text_log.setText(new_route);
 
         // RUN
         MAGPSManager.startLocation();
@@ -174,15 +213,10 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
     // onClick Event
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.map_btn_activity){
-            if((int)btn_activity.getTag() == 1){
-                final int sdk = android.os.Build.VERSION.SDK_INT;
-                if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    btn_activity.setBackgroundDrawable( getResources().getDrawable(R.drawable.map_icon_pause) );
-                } else {
-                    btn_activity.setBackground( getResources().getDrawable(R.drawable.map_icon_pause));
-                }
-                btn_activity.setTag(2);
+        if(v.getId() == R.id.look_btn_a){
+            if((int)acti_sA_btn.getTag() == 1){
+                acti_sA_btn.setText(R.string.ELCIcon_pausecircle);
+                acti_sA_btn.setTag(2);
                 pause_timer = false;
                 locationLast = null;
                 locationLast = new LatLng(MAGPSManager.latitud, MAGPSManager.longitud);
@@ -191,17 +225,12 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
                     statusTrackSave(1);
                 }
             }else{
-                final int sdk = android.os.Build.VERSION.SDK_INT;
-                if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                    btn_activity.setBackgroundDrawable( getResources().getDrawable(R.drawable.map_icon_playcircle) );
-                } else {
-                    btn_activity.setBackground( getResources().getDrawable(R.drawable.map_icon_playcircle));
-                }
-                btn_activity.setTag(1);
+                acti_sA_btn.setText(R.string.ELCIcon_playcircle);
+                acti_sA_btn.setTag(1);
                 pause_timer = true;
                 stopTimer();
             }
-        }else if(v.getId() == R.id.map_btn_stop){
+        }else if(v.getId() == R.id.look_btn_b){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(false);
             builder.setMessage("¿Seguro que quieres terminar el viaje?");
@@ -213,9 +242,9 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
                     statusTrackSave(2);
                     pause_timer = true;
                     stopTimer();
-                    Intent intent = new Intent(MapsActivity.this, PrevioMapActivity.class);
+                    Intent intent = new Intent(PlayRoutrLookActivity.this, PrevioMapRouteActivity.class);
                     intent.putExtra("ID_TRACK", track_id);
-                    MapsActivity.this.startActivity(intent);
+                    PlayRoutrLookActivity.this.startActivity(intent);
                     finish();
                 }
             });
@@ -319,7 +348,6 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
     public void saveLineMaps(){
         float dis = MAGPSManager.calcularDistancia(locationLast.latitude, locationLast.longitude, MAGPSManager.latitud, MAGPSManager.longitud);
         Log.d("locate", "Distancia:"+dis);
-        text_log.setText("Distancia:"+dis+" Timer:"+duracion);
         boolean ifDistancia = checkLimitMove(dis);
         if(ifDistancia){
             /*
@@ -335,7 +363,9 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
     }
 
     public void saveLineBD(){
+        Log.d("LOGMA", "PASE:"+MAGPSManager.useLocation);
         id_last_location = this.dataSource.addNewPoint(track_id, MAGPSManager.useLocation, duracion);
+        Log.d("LOGMA", "PASE");
     }
 
     public void  moveCamaraMaps(){
@@ -364,7 +394,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
                 pause_timer = true;
                 stopTimer();
                 finish();
-                Intent startInicio = new Intent(PlayRoutrLookActivity.this, HomeActivity.class);
+                Intent startInicio = new Intent(PlayRoutrLookActivity.this, DestinosActivity.class);
                 startActivity(startInicio);
             }
         });
@@ -377,6 +407,32 @@ public class PlayRoutrLookActivity extends AppCompatActivity {
         });
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
+    {
+        switch (requestCode)
+        {
+            case REQUEST_CODE_ASK_PERMISSIONS:
+            {
+                //Si la petición es cancelada, el resultado estará vacío.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                {
+                    //Permiso aceptado, se podría acceder a los contactos del dispositivo.
+
+                } else
+                {
+                    //Permiso denegado. Desactivar la funcionalidad que dependía de dicho permiso.
+                }
+                return;
+            }
+
+            // A continuación, se expondrían otras posibilidades de petición de permisos.
+        }
     }
 }
 

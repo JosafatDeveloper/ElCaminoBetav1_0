@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -68,6 +69,7 @@ public class ManagerSQLite {
 
     public static class ColumnOther{
         public static final String NAME_TRACK_AND_NAME_ROUTE = "other_nt_and_nr";
+        public static final String ID_ROUTE_TRACK_CONFIGURE = "id_track_configure";
     }
 
     public static class ColumnRoutesTrackPoint{
@@ -204,16 +206,51 @@ public class ManagerSQLite {
                 "select "+
                         " * from "+
                         ROUTE_TRACK_TABLE_NAME+
-                        " where "+ColumnRoutesTrack.ID_ROUTE+" = "+id_route, null);
+                        " where "+ColumnRoutesTrack.ID_ROUTE+" = "+id_route+" order by datetime(\""+ColumnRoutesTrack.MODIFY_TRACK+"\") DESC", null);
     }
 
-    public Cursor getTrackInfo(int id_track){
-        return database.rawQuery(
-                "select "+
-                        " * from "+
-                        ROUTE_TRACK_TABLE_NAME+
-                        " where "+ColumnRoutesTrack.ID_ROUTE_TRACK+" = "+id_track, null);
+    public Cursor getTrackInfo(int id_track, boolean configure){
+        if(configure){
+            String sqlSend = "select "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE_TRACK+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ROUTE_TRACK_NAME+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.STATUS_ROUTE_TRACK+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.TIME_TOTAL+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.DISTANCIA_TOTAL+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.MODIFY_TRACK+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.ID_CONFIG+" as "+ColumnOther.ID_ROUTE_TRACK_CONFIGURE+" , "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.UPLOAD_CLOUD+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.PAUSEA_AUTO+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.TYPE_PUBLIC+
+                    " from "+ROUTE_TRACK_TABLE_NAME+","+ROUTE_TRACK_CONFIG_TABLE_NAME+
+                    " where "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE_TRACK+" = "+id_track+" AND "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.ID_TRACK+" = "+id_track;
+            return database.rawQuery(sqlSend, null);
+        }else{
+            String sqlSend = "select "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE_TRACK+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ROUTE_TRACK_NAME+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.STATUS_ROUTE_TRACK+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.TIME_TOTAL+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.DISTANCIA_TOTAL+", "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.MODIFY_TRACK+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.ID_CONFIG+" as "+ColumnOther.ID_ROUTE_TRACK_CONFIGURE+" , "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.UPLOAD_CLOUD+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.PAUSEA_AUTO+", "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.TYPE_PUBLIC+
+                    " from "+ROUTE_TRACK_TABLE_NAME+","+ROUTE_TRACK_CONFIG_TABLE_NAME+
+                    " where "+
+                    ROUTE_TRACK_TABLE_NAME+"."+ColumnRoutesTrack.ID_ROUTE_TRACK+" = "+id_track+" AND "+
+                    ROUTE_TRACK_CONFIG_TABLE_NAME+"."+ColumnRoutesTrackConfig.ID_TRACK+" = "+id_track;
+            return database.rawQuery(
+                    "select * from "+ROUTE_TRACK_TABLE_NAME+" where "+ColumnRoutesTrack.ID_ROUTE_TRACK+" = "+id_track, null);
+        }
+
     }
+
 
 
 

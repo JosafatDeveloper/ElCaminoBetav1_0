@@ -1,8 +1,10 @@
 package mx.onlinesellers.elcaminobeta10;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -79,7 +81,72 @@ public class DestinosSelectActivity extends AppCompatActivity implements Adapter
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(this, PrevioMapRouteActivity.class);
+        Log.d("LOGMA", "IDF:"+id);
+        intent.putExtra("ID_TRACK",(int) id);
+        intent.putExtra("goBack", true);
+        this.startActivity(intent);
+    }
 
+    public void onItemClickPlay(View v, long id, int status){
+        boolean sendPlay = false;
+        switch (status){
+            case 0:{
+                sendPlay = true;
+            }
+            break;
+            case 1:{
+                sendPlay = true;
+            }
+            break;
+            case 2:{
+                AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle("Recorrido");
+                alertDialog.setMessage("El recorrido ya esta finalizado");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+            break;
+            default:{
+                AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle("Error");
+                alertDialog.setMessage("El recorrido no tiene Estatus");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        }
+        if (sendPlay){
+            Cursor cursor = dataSource.getTrackInfo((int)id, true);
+            if (cursor != null) {
+                while(cursor.moveToNext()) {
+                    int id_track = cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.ID_ROUTE_TRACK));
+                    int id_ajustes_track = cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnOther.ID_ROUTE_TRACK_CONFIGURE));
+                    Intent intent = new Intent(this, PlayRoutrLookActivity.class);
+                    intent.putExtra("TRACK_ID", id_track);
+                    intent.putExtra("TRACK_CONFIG_ID", id_ajustes_track);
+                    intent.putExtra("ROUTE_ID", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.ID_ROUTE)));
+                    intent.putExtra("CLOUD_SELECT", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrackConfig.UPLOAD_CLOUD)));
+                    intent.putExtra("PAUSEA_SELECT", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrackConfig.PAUSEA_AUTO)));
+                    intent.putExtra("NAME_TRACK", cursor.getString(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.ROUTE_TRACK_NAME)));
+                    intent.putExtra("PUBLIC_TYPE", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrackConfig.TYPE_PUBLIC)));
+                    intent.putExtra("DISTANCIA_SELECT", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.DISTANCIA_TOTAL)));
+                    intent.putExtra("TOTAL_TIMER", cursor.getInt(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutesTrack.TIME_TOTAL)));
+                    this.startActivity(intent);
+                }
+                cursor.close();
+            }
+
+        }
     }
 
     public void newViajeCreate(View v){

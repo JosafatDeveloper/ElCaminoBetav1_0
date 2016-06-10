@@ -29,6 +29,9 @@ public class DestinosActivity extends AppCompatActivity implements AdapterView.O
     private ManagerSQLite dataSource;
     private AdpaterRowsActivityS4 adapter;
 
+    int CloudSelect = 5;
+    int PauseSelect = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +87,33 @@ public class DestinosActivity extends AppCompatActivity implements AdapterView.O
         intent.putExtra("t", title.getText().toString());
         intent.putExtra("idR", id);
         this.startActivity(intent);
+        Log.d("LOGMA", "DECLickItem");
     }
+
+    public void onItemClickPlay(View v, long id){
+        Cursor cursordata = dataSource.countTrack((int)id);
+        String[] data;
+        if (cursordata != null) {
+            while(cursordata.moveToNext()) {
+                data = new String[1];
+                data[0] = Integer.toString(cursordata.getInt(0));
+                String newNametrack = " Vuelta "+ data[0];
+                int id_track = dataSource.addNewRouteTrack((int)id, newNametrack);
+                int id_ajustes_track = dataSource.addTrackConfig(id_track, CloudSelect, PauseSelect, 0,0,0,0,0);
+                cursordata.close();
+                Intent intent = new Intent(this, PlayRoutrLookActivity.class);
+                intent.putExtra("TRACK_ID", id_track);
+                intent.putExtra("TRACK_CONFIG_ID", id_ajustes_track);
+                intent.putExtra("ROUTE_ID", (int)id);
+                intent.putExtra("CLOUD_SELECT", CloudSelect);
+                intent.putExtra("PAUSEA_SELECT", PauseSelect);
+                intent.putExtra("NAME_TRACK", newNametrack);
+                intent.putExtra("PUBLIC_TYPE", 0);
+                this.startActivity(intent);
+            }
+        }
+    }
+
 
     public void clickAddDestino(View v){
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);

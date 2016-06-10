@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView4"
-        android:layout_below="@+id/relativeLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" >
 
@@ -67,7 +66,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:text="@string/ELCIcon_pausecircle"
+                    android:text="@string/ELCIcon_playcircle"
                     android:id="@+id/look_btn_a"
                     android:background="@color/ELCColorClear"
                     android:textSize="80sp" />
@@ -93,17 +92,109 @@
                     android:textSize="80dp" />
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/linearLayout3"
+                android:id="@+id/barraactivity">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#454545"
+                    android:id="@+id/frameLayout2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|bottom"
+                        android:background="#454545"
+                        android:paddingLeft="130dp"
+                        android:id="@+id/frameLayout" >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/imageView5"
+                            android:layout_gravity="left|top"
+                            android:src="@drawable/map_icon_timer" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="00:00:00"
+                            android:id="@+id/map_timer"
+                            android:layout_gravity="left|top"
+                            android:paddingLeft="45dp"
+                            android:textColor="@color/abc_secondary_text_material_dark"
+                            android:textSize="30sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal|top"
+                        android:paddingLeft="130dp"
+                        android:background="#454545" >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/imageView6"
+                            android:layout_gravity="left"
+                            android:src="@drawable/map_route_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="0.000 km"
+                            android:id="@+id/map_distancia"
+                            android:layout_gravity="center"
+                            android:textColor="@color/abc_secondary_text_material_dark"
+                            android:textSize="30dp"
+                            android:paddingLeft="45dp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/map_text_velocidad"
+                        android:layout_gravity="left|top"
+                        android:background="#ffffff"
+                        android:textAlignment="center"
+                        android:textColor="#454545"
+                        android:textSize="50dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="km/h"
+                        android:id="@+id/textView31"
+                        android:layout_gravity="left|bottom"
+                        android:textAlignment="center"
+                        android:textColor="#454545" />
+                </FrameLayout>
+            </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Licencia: 121202984839492"
                 android:id="@+id/textView13"
-                android:layout_below="@+id/linearLayout3"
+                android:layout_below="@+id/barraactivity"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textSize="18dp"
                 android:layout_marginBottom="10dp"
-                android:layout_alignLeft="@+id/linearLayout3" />
+                android:layout_alignLeft="@+id/linearLayout3"
+                android:layout_marginTop="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,7 +236,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:background="@color/ELCColorWhite"
-                android:id="@+id/relativeLayout2">
+                android:id="@+id/relativeLayout2st"
+                android:visibility="invisible">
 
                 <TextView
                     android:layout_width="50dp"

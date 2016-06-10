@@ -6,10 +6,12 @@ import android.database.sqlite.SQLiteCursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +39,7 @@ public class AdpaterRowsActivityS4 extends CursorAdapter {
     }
 
     @Override
-    public void bindView(View view, Context context, Cursor cursor) {
+    public void bindView(View view, final Context context, final Cursor cursor) {
         TextView title = (TextView) view.findViewById(R.id.row_text_title);
         title.setText(cursor.getString(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutes.ROUTE_NAME)));
         TextView describe = (TextView) view.findViewById(R.id.row_text_describe);
@@ -50,5 +52,21 @@ public class AdpaterRowsActivityS4 extends CursorAdapter {
         TextView icon2 = (TextView) view.findViewById(R.id.row_text_icon2);
         icon2.setTypeface(ElCaminoFontIcon);
         icon2.setText(R.string.ELCIcon_locationarrow);
+
+        Button icon_btn = (Button) view.findViewById(R.id.destinos_btn_newtrack);
+        icon_btn.setTypeface(ElCaminoFontIcon);
+        icon_btn.setText(R.string.ELCIcon_playcircle);
+        icon_btn.setOnClickListener(new View.OnClickListener(){
+            DestinosActivity destinosActivity = (DestinosActivity) context;
+            long id = cursor.getLong(cursor.getColumnIndexOrThrow(ManagerSQLite.ColumnRoutes.ID_ROUTE));
+            @Override
+            public void onClick(View v) {
+                //do something
+                destinosActivity.onItemClickPlay(v, id);
+            }
+        });
+
+
     }
+
 }

@@ -13,4 +13,6 @@
     <color name="ELCColorEstrellaAct">#f0e400</color>
     <color name="ELCColorEstrellaSombra">#585858</color>
     <color name="ELCColorSendView">#6a6a6a</color>
+    <color name="ELCColorBTNActPlay">#00d0ff</color>
+    <color name="ELCColorBTNActPause">#ffd900</color>
 </resources>

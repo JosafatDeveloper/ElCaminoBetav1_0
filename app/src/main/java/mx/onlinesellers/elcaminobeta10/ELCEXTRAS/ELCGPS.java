@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 /**
@@ -65,31 +66,63 @@ public class ELCGPS extends Service implements LocationListener {
             locationManager = (LocationManager)ctx.getSystemService(LOCATION_SERVICE);
             GPSActive = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             if (GPSActive) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        return;
-                    } else {
+                if (Build.VERSION.SDK_INT >= 23) {
+                    // Marshmallow+
+                    Log.d("LOGMA", "SUN23");
+                    if (ContextCompat.checkSelfPermission(ctx.getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(ctx.getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        // Pre-Marshmallow
+                        Log.d("LOGMA", "CON-PERMISOS");
+                        Criteria crta = new Criteria();
+                        crta.setAccuracy(Criteria.ACCURACY_FINE);
+                        crta.setAltitudeRequired(false);
+                        crta.setBearingRequired(false);
+                        crta.setCostAllowed(true);
+                        crta.setPowerRequirement(Criteria.POWER_LOW);
+                        String provider = locationManager.getBestProvider(crta, true);
+                        locationManager.requestLocationUpdates(provider, 1000, 0, this);
+                        if(locationManager != null){
+                            Log.d("LOGMA", "Memori A LocationManager");
+                            location = locationManager.getLastKnownLocation(provider);
+                            useLocation = locationManager.getLastKnownLocation(provider);
+                            latitud = location.getLatitude();
+                            longitud = location.getLongitude();
+                            latitud_last = latitud;
+                            longitud_last = longitud;
+                            Log.d("LOGMA", "Memori A LocationManager");
+                        }else{
+                            Log.d("LOGMA", "Null LocationManager");
+                        }
+
+                    }
+
+                } else {
+                    // Pre-Marshmallow
+                    Log.d("LOGMA", "SIN-PERMISOS");
+                    Criteria crta = new Criteria();
+                    crta.setAccuracy(Criteria.ACCURACY_FINE);
+                    crta.setAltitudeRequired(false);
+                    crta.setBearingRequired(false);
+                    crta.setCostAllowed(true);
+                    crta.setPowerRequirement(Criteria.POWER_LOW);
+                    String provider = locationManager.getBestProvider(crta, true);
+                    locationManager.requestLocationUpdates(provider, 1000, 0, this);
+                    if(locationManager != null){
+                        location = locationManager.getLastKnownLocation(provider);
+                        useLocation = locationManager.getLastKnownLocation(provider);
+                        latitud = location.getLatitude();
+                        longitud = location.getLongitude();
+                        latitud_last = latitud;
+                        longitud_last = longitud;
                     }
                 }
-                Criteria crta = new Criteria();
-                crta.setAccuracy(Criteria.ACCURACY_FINE);
-                crta.setAltitudeRequired(false);
-                crta.setBearingRequired(false);
-                crta.setCostAllowed(true);
-                crta.setPowerRequirement(Criteria.POWER_LOW);
-                String provider = locationManager.getBestProvider(crta, true);
-                locationManager.requestLocationUpdates(provider, 1000, 0, this);
-                if(locationManager != null){
-                    location = locationManager.getLastKnownLocation(provider);
-                    useLocation = locationManager.getLastKnownLocation(provider);
-                    latitud = location.getLatitude();
-                    longitud = location.getLongitude();
-                    latitud_last = latitud;
-                    longitud_last = longitud;
-                }
+
+
+            }else{
+                Log.d("LOGMA", "LLLD");
             }
         } catch (Exception e) {
-            Log.d("Error", "Error en el servicio:"+e.toString());
+            Log.d("LOGMA", "Error en el servicio:"+e.toString());
         }
     }
 

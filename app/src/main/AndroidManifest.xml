@@ -81,7 +81,10 @@
         <service android:name=".ELCEXTRAS.ELCFunciones" />
 
         <activity android:name=".DestinosSelectActivity" />
-        <activity android:name=".PrevioMapRouteActivity"></activity>
+        <activity android:name=".PrevioMapRouteActivity" />
+        <activity android:name=".LoadAppActivity" />
+        <activity android:name=".NewOpenActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

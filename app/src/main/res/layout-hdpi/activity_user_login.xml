@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="2016 ® EL CAMINO - BETA v1.0"
-        android:id="@+id/textView"
+        android:id="@+id/newopen_footer_title"
         android:textSize="14dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -33,7 +33,7 @@
         android:text="Siguiente"
         android:id="@+id/button"
         android:onClick="onClickNext"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/loginInputPassw"
         android:layout_centerHorizontal="true"
         android:background="@color/ELCColorClear" />
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/loginInputUser"
         android:password="false"
         android:text="email"
         android:layout_centerVertical="true"
@@ -53,11 +53,11 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/loginInputPassw"
         android:text="contraseña"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_below="@+id/loginInputUser"
+        android:layout_alignLeft="@+id/loginInputUser"
+        android:layout_alignStart="@+id/loginInputUser" />
 
     <Button
         style="?android:attr/buttonStyleSmall"

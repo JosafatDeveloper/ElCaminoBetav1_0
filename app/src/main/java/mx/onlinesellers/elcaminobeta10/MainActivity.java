@@ -20,14 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Hide StatusBar
-        /*
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        */
-        // Status Bar change Color
+        // Status Bar change Color API LEVEL 21 >=
         int currentapiVersion = Build.VERSION.SDK_INT;
         if (currentapiVersion >= Build.VERSION_CODES.LOLLIPOP){
             // Do something for lollipop and above versions
@@ -37,14 +30,16 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(MainActivity.this.getResources().getColor(R.color.ELCColorBlak));
         }
 
-        Log.d("LOGMA",  ""+getResources().getDisplayMetrics().density);
     }
 
-    // Demo Run
-    public void onClickNext(View view){
+    public void clickDemo(View view){
         Intent intent = new Intent(MainActivity.this, PresentacionActivity.class);
         startActivity(intent);
     }
 
+    public void clickRunApp(View view){
+        Intent intent = new Intent(this, LoadAppActivity.class);
+        startActivity(intent);
+    }
 
 }

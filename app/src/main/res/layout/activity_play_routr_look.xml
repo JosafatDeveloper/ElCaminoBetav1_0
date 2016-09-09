@@ -8,7 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="mx.onlinesellers.elcaminobeta10.PlayRoutrLookActivity"
-    android:background="@color/ELCColorBlak">
+    android:background="@color/ELCColorBlak"
+    android:id="@+id/viewBack">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -90,6 +91,7 @@
                     android:layout_marginTop="-100dp"
                     android:background="@color/ELCColorClear"
                     android:textSize="80dp" />
+
             </LinearLayout>
 
             <RelativeLayout
@@ -279,9 +281,46 @@
                     android:textStyle="italic"
                     android:textColor="@color/ELCColorBlackSubtitle"
                     android:lines="1" />
+
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="G:"
+                android:id="@+id/girp01"
+                android:textColor="@color/ELCColorWhite"
+                android:textAlignment="viewStart"
+                android:textSize="18dp"
+                android:layout_below="@+id/textView12"
+                android:layout_toRightOf="@+id/imageView3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snak"
+                android:id="@+id/snakLabel"
+                android:layout_below="@+id/girp01"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
     </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="A:"
+        android:id="@+id/acel01"
+        android:textColor="@color/ELCColorWhite"
+        android:textAlignment="viewStart"
+        android:textSize="18dp"
+        android:layout_alignBottom="@+id/scrollView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

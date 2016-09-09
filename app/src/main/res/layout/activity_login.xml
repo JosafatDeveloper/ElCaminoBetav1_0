@@ -7,15 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mx.onlinesellers.elcaminobeta10.LoginActivity"
     android:background="@color/ELCColorBlak">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:id="@+id/main_image_logo"
         android:src="@drawable/app_logo_full"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,13 +32,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siguiente"
+        android:text="Entrar"
         android:id="@+id/button"
-        android:onClick="onClickNext"
-        android:layout_above="@+id/newopen_footer_title"
-        android:layout_alignRight="@+id/main_image_logo"
-        android:layout_alignEnd="@+id/main_image_logo"
-        android:background="@color/ELCColorClear" />
+        android:background="@color/ELCColorClear"
+        android:layout_below="@+id/loginInputPassw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:onClick="onClickHome" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -47,7 +50,8 @@
         android:layout_below="@+id/main_image_logo"
         android:layout_centerHorizontal="true"
         android:password="false"
-        android:text="email" />
+        android:layout_marginTop="20dp"
+        android:hint="Email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,17 +61,17 @@
         android:id="@+id/loginInputPassw"
         android:layout_below="@+id/loginInputUser"
         android:layout_centerHorizontal="true"
-        android:text="contraseña" />
+        android:hint="Contraseña" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Restablecer Contraseña"
         android:id="@+id/button3"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="onClickNext2"
-        android:background="@color/ELCColorClear" />
+        android:background="@color/ELCColorClear"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp" />
 
 </RelativeLayout>

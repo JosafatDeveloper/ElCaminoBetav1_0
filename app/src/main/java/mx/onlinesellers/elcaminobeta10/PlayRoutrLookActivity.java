@@ -2,11 +2,16 @@ package mx.onlinesellers.elcaminobeta10;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Typeface;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -15,6 +20,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.google.android.gms.maps.model.LatLng;
 import java.util.Timer;
@@ -23,7 +29,7 @@ import java.util.TimerTask;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCFunciones;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCGPS;
 
-public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnClickListener {
+public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener {
 
     public Button acti_sA_btn;
     public Button acti_sB_btn;
@@ -33,6 +39,21 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     public TextView acti_titulo;
     public TextView acti_describe;
 
+    public RelativeLayout viewBack;
+
+    // SENSORES
+    public TextView giro_label;
+    public TextView ace_label;
+    public TextView snakLabel;
+    private SensorManager senSensorManager;
+    private Sensor senAccelerometer;
+    private long lastUpdate = 0;
+    private long lasUpdateSave = 0;
+    private float last_x, last_y, last_z;
+    private static final int SHAKE_THRESHOLD = 3000;
+    private static final int SHAKE_THRESHOLD_HARD = 4500;
+    private static final int SHOW_MOVE = 200;
+
     public int distancia = 0; // Distancia en Kilometros
     public Timer timer_clock; // Timer de la duración total
     public double duracion = 0;
@@ -40,7 +61,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     public int secuencia_saveServer = 0;
     public int limit_saveline = 2;
     public int limit_saveServer = 10;
-    public int distancia_limit_track = 5;
+    public int distancia_limit_track = 1;
     public Location[] locations;
     public LatLng locationLast;
     public boolean pause_timer; // Timer pause
@@ -85,6 +106,16 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         acti_sA_btn = (Button) findViewById(R.id.look_btn_a);
         acti_sB_btn = (Button) findViewById(R.id.look_btn_b);
         acti_sC_btn = (Button) findViewById(R.id.look_btn_c);
+
+        viewBack = (RelativeLayout) findViewById(R.id.viewBack);
+
+        // SENSORES
+        giro_label = (TextView) findViewById(R.id.girp01);
+        ace_label = (TextView) findViewById(R.id.acel01);
+        snakLabel = (TextView) findViewById(R.id.snakLabel);
+        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
         acti_icon = (TextView) findViewById(R.id.look_icon_row);
         acti_titulo = (TextView) findViewById(R.id.look_titulo);
@@ -209,6 +240,71 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
     */
+
+
+    public void onSensorChanged(SensorEvent event){
+        Sensor mySensor = event.sensor;
+        if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+            long curTime = System.currentTimeMillis();
+
+            if((curTime - lasUpdateSave) > 500){
+                long diffTime = (curTime -lasUpdateSave);
+                lasUpdateSave = curTime;
+                float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+                if(speed > SHOW_MOVE){
+                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
+                }else{
+                    snakLabel.setText("SOLID");
+                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorBlak));
+                }
+            }
+
+
+            if ((curTime - lastUpdate) > 100) {
+                long diffTime = (curTime - lastUpdate);
+                lastUpdate = curTime;
+
+                float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+                /*
+                if(speed > SHAKE_THRESHOLD_HARD){
+                    snakLabel.setText("SHAKE PHONE HARD");
+                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
+                }else if (speed > SHAKE_THRESHOLD) {
+                    snakLabel.setText("SHAKE PHONE");
+                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorEstrellaAct));
+                }else if(speed > SHOW_MOVE){
+                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
+                }else{
+                    snakLabel.setText("SOLID");
+                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorBlak));
+                }
+                */
+
+                last_x = x;
+                last_y = y;
+                last_z = z;
+            }
+            ace_label.setText("x:"+last_x+" \ny:"+last_y+"\nz:"+last_z);
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+
+    protected void onPause() {
+        super.onPause();
+        senSensorManager.unregisterListener(this);
+    }
+    protected void onResume() {
+        super.onResume();
+        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+    }
 
     // onClick Event
     @Override

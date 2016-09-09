@@ -7,13 +7,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="mx.onlinesellers.elcaminobeta10.RestablecerPassActivity"
+    tools:context="mx.onlinesellers.elcaminobeta10.LoadAppActivity"
     android:background="@color/ELCColorBlak">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="2016 ® EL CAMINO - BETA v1.0"
+        android:id="@+id/textView24"
+        android:textSize="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:id="@+id/main_image_logo"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
         android:src="@drawable/app_logo_full"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -21,33 +31,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="2016 ® EL CAMINO - BETA v1.0"
-        android:id="@+id/newopen_footer_title"
-        android:textSize="14dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/loginInputUser"
-        android:password="false"
-        android:text="email"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restablecer Contraseña"
-        android:id="@+id/button4"
+        android:text="Cargando..."
+        android:id="@+id/textView29"
+        android:textColor="@color/ELCColorWhite"
+        android:textSize="20dp"
+        android:layout_below="@+id/loadapp_imageview_loadicon"
         android:layout_centerHorizontal="true"
-        android:onClick="onClickNext"
-        android:layout_below="@+id/loginInputUser"
-        android:background="@color/ELCColorClear" />
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/loadapp_imageview_loadicon"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@android:drawable/stat_notify_sync" />
 
 </RelativeLayout>

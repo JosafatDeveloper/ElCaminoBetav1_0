@@ -17,6 +17,7 @@ import java.util.Date;
 public class ManagerSQLite {
     //Metainformación de la base de datos
     public static final String USERS_TABLE_NAME = "users";
+    public static final String USER_DATA_TABLE_NAME = "user_data";
     public static final String ROUTES_TABLE_NAME = "routes";
     public static final String ROUTE_TRACK_TABLE_NAME = "routes_track";
     public static final String ROUTE_TRACK_CONFIG_TABLE_NAME = "routes_track_config";
@@ -35,7 +36,11 @@ public class ManagerSQLite {
         public static final String USER_NAME = "user_name";
         public static final String USER_ALIAS = "user_alias";
     }
-
+    public static class ColumnUserData{
+        public static final String ID_DATA = BaseColumns._ID;
+        public static final String USER_PARAMETRO = "user_parametro";
+        public static final String USER_VALUE = "user_value";
+    }
     public static class  ColumnRoutes{
         public static final String ID_ROUTE = BaseColumns._ID;
         public static final String ROUTE_NAME = "route_name";
@@ -83,12 +88,51 @@ public class ManagerSQLite {
         public static final String CHECK_DATETIME = "check_datetime";
     }
 
+    public static class ParamterosDataUser{
+        // PARAMETRO
+        public static final String P_SERVER_HOST = "SERVER_HOST";
+        public static final String P_SERVER_SSl = "SERVER_SSL";
+        public static final String P_SERVER_TEST = "SERVER_TEST";
+        public static final String P_API_HOST = "API_HOST";
+        public static final String P_APP_VERSION = "APP_VERSION";
+        public static final String P_SERIAL_APP = "SERIAL_APP";
+        public static final String P_USER_KEY = "SERIAL_APP";
+        public static final String P_USER_ID = "USER_ID";
+        public static final String P_USER_EMAIL = "USER_EMAIL";
+        public static final String P_USER_PASS = "USER_PASS";
+        public static final String P_USER_NAME = "USER_NAME";
+        public static final String P_USER_NAMEP = "USER_NAMEP";
+        public static final String P_USER_NAMEM = "USER_NAMEM";
+        // VALUE
+        public static final String V_SERVER_HOST = "https://squashmex.com.mx";
+        public static final String V_SERVER_SSl = "true";
+        public static final String V_SERVER_TEST = "https://www.google.com.mx";
+        public static final String V_API_HOST = "1.0";
+        public static final String V_APP_VERSION = "1.0";
+        public static final String V_SERIAL_APP = "null";
+        public static final String V_USER_KEY = "null";
+        public static final String V_USER_ID = "null";
+        public static final String V_USER_EMAIL = "null";
+        public static final String V_USER_PASS = "null";
+        public static final String V_USER_NAME = "null";
+        public static final String V_USER_NAMEP = "null";
+        public static final String V_USER_NAMEM = "null";
+
+
+    }
+
     //Script de Creación de la tabla Quotes
     public static final String CREATE_USERS_SCRIPT =
             "create table "+USERS_TABLE_NAME+"(" +
                     ColumnUsers.ID_USER+" "+INT_TYPE+" primary key autoincrement," +
                     ColumnUsers.USER_NAME+" "+STRING_TYPE+" not null," +
                     ColumnUsers.USER_ALIAS+" "+STRING_TYPE+" not null)";
+
+    public static final String CREATE_USER_DATA_SCRIPT =
+            "create table "+USER_DATA_TABLE_NAME+"(" +
+                    ColumnUserData.ID_DATA+" "+INT_TYPE+" primary key autoincrement," +
+                    ColumnUserData.USER_PARAMETRO+" "+STRING_TYPE+" not null,"+
+                    ColumnUserData.USER_VALUE+" "+STRING_TYPE+" not null)";
 
     public static final String CREATE_ROUTES_SCRIPT =
             "create table "+ROUTES_TABLE_NAME+"("+
@@ -135,12 +179,36 @@ public class ManagerSQLite {
                     ColumnRoutesTrackConfig.FINISH_LON+" "+DOUBLE_TYPE+" not null,"+
                     ColumnRoutesTrackConfig.TYPE_PUBLIC+" "+INT_TYPE+" not null)";
 
-    //Scripts de inserción por defecto
-    public static final String INSERT_QUOTES_SCRIPT =
-            "insert into "+USERS_TABLE_NAME+" values(" +
-                    "null," +
-                    "\"Developer\"," +
-                    "\"developer\")";
+    // Scripts User Data 1.0
+    public static final String INSERT_QUOTES_USER_DATA_SCRIPT_1_0 =
+            "insert into "+USER_DATA_TABLE_NAME+" values(null," +
+                    "\""+ParamterosDataUser.P_API_HOST+"\", " +
+                    "\""+ParamterosDataUser.V_API_HOST+"\"), (null," +
+                    "\""+ParamterosDataUser.P_APP_VERSION+"\", " +
+                    "\""+ParamterosDataUser.V_APP_VERSION+"\"), (null," +
+                    "\""+ParamterosDataUser.P_SERIAL_APP+"\", " +
+                    "\""+ParamterosDataUser.V_SERIAL_APP+"\"), (null," +
+                    "\""+ParamterosDataUser.P_SERVER_HOST+"\", " +
+                    "\""+ParamterosDataUser.V_SERVER_HOST+"\"), (null," +
+                    "\""+ParamterosDataUser.P_SERVER_SSl+"\", " +
+                    "\""+ParamterosDataUser.V_SERVER_SSl+"\"), (null," +
+                    "\""+ParamterosDataUser.P_SERVER_TEST+"\", " +
+                    "\""+ParamterosDataUser.V_SERVER_TEST+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_EMAIL+"\", " +
+                    "\""+ParamterosDataUser.V_USER_EMAIL+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_ID+"\", " +
+                    "\""+ParamterosDataUser.V_USER_ID+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_KEY+"\", " +
+                    "\""+ParamterosDataUser.V_USER_KEY+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_NAME+"\", " +
+                    "\""+ParamterosDataUser.V_USER_NAME+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_NAMEM+"\", " +
+                    "\""+ParamterosDataUser.V_USER_NAMEM+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_NAMEP+"\", " +
+                    "\""+ParamterosDataUser.V_USER_NAMEP+"\"), (null," +
+                    "\""+ParamterosDataUser.P_USER_PASS+"\", " +
+                    "\""+ParamterosDataUser.V_USER_PASS+"\")";
+
 
 
     //Variables para manipulación de datos
@@ -172,6 +240,10 @@ public class ManagerSQLite {
         values.put(ColumnRoutes.ROUTE_MODIFY,date);
         //Insertando en la base de datos
         database.insert(ROUTES_TABLE_NAME,null,values);
+    }
+
+    public Cursor getALLUserData(){
+        return database.rawQuery("select * from "+USER_DATA_TABLE_NAME, null);
     }
 
     public Cursor getAllUsers(){

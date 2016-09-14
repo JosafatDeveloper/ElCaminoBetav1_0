@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickRunApp(View view){
-        Intent intent = new Intent(this, LoadAppActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 

@@ -12,6 +12,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.location.Criteria;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -28,8 +29,9 @@ import java.util.TimerTask;
 
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCFunciones;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCGPS;
+import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCSENSORS;
 
-public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener {
+public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnClickListener {
 
     public Button acti_sA_btn;
     public Button acti_sB_btn;
@@ -43,23 +45,14 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
 
     // SENSORES
     public TextView giro_label;
-    public TextView ace_label;
-    public TextView snakLabel;
-    private SensorManager senSensorManager;
-    private Sensor senAccelerometer;
-    private long lastUpdate = 0;
-    private long lasUpdateSave = 0;
-    private float last_x, last_y, last_z;
-    private static final int SHAKE_THRESHOLD = 3000;
-    private static final int SHAKE_THRESHOLD_HARD = 4500;
-    private static final int SHOW_MOVE = 200;
+    public TextView acce_label;
 
     public int distancia = 0; // Distancia en Kilometros
     public Timer timer_clock; // Timer de la duración total
     public double duracion = 0;
     public int secuencia_saveLine = 0;
     public int secuencia_saveServer = 0;
-    public int limit_saveline = 2;
+    public int limit_saveline = 4;
     public int limit_saveServer = 10;
     public int distancia_limit_track = 1;
     public Location[] locations;
@@ -73,6 +66,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     // Services
     ELCFunciones elcFunciones;
     ELCGPS MAGPSManager;
+    ELCSENSORS ELCSENSORSManager;
 
     public int track_id;
     public int track_config_id;
@@ -92,6 +86,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     private ManagerSQLite dataSource;
 
     public int id_last_location;
+    public int id_last_move;
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
@@ -108,14 +103,6 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         acti_sC_btn = (Button) findViewById(R.id.look_btn_c);
 
         viewBack = (RelativeLayout) findViewById(R.id.viewBack);
-
-        // SENSORES
-        giro_label = (TextView) findViewById(R.id.girp01);
-        ace_label = (TextView) findViewById(R.id.acel01);
-        snakLabel = (TextView) findViewById(R.id.snakLabel);
-        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
         acti_icon = (TextView) findViewById(R.id.look_icon_row);
         acti_titulo = (TextView) findViewById(R.id.look_titulo);
@@ -182,10 +169,6 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
                     REQUEST_CODE_ASK_PERMISSIONS);
             return;
         }
-
-
-
-
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_COARSE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -220,90 +203,24 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
             }
         }
 
+        giro_label = (TextView) findViewById(R.id.giroscopeLabel);
+        acce_label = (TextView) findViewById(R.id.accelerometroLabel);
+
         // Load Servicios
+        // Funciones
         elcFunciones = new ELCFunciones(getApplicationContext());
+        // GPS
         MAGPSManager = new ELCGPS(getApplicationContext());
-
-        // RUN
-        MAGPSManager.startLocation();
+        Criteria ctra = (Criteria) MAGPSManager.newHighCriteria();
+        MAGPSManager.newLocationListener(ctra);
         LatLng locate_init = new LatLng(MAGPSManager.latitud, MAGPSManager.longitud);
         locationLast = new LatLng(MAGPSManager.latitud, MAGPSManager.longitud);
-    }
-    /*@Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        MAGPSManager.startLocation();
-        LatLng locate_init = new LatLng(MAGPSManager.latitud, MAGPSManager.longitud);
-        locationLast = new LatLng(MAGPSManager.latitud, MAGPSManager.longitud);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(locate_init, 18));
-        mMap.setMyLocationEnabled(true);
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-    }
-    */
+        // Sensor
+        ELCSENSORSManager = new ELCSENSORS(getApplicationContext());
+        ELCSENSORSManager.LogLabel(giro_label, acce_label);
+        ELCSENSORSManager.startSensor();
 
 
-    public void onSensorChanged(SensorEvent event){
-        Sensor mySensor = event.sensor;
-        if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            float x = event.values[0];
-            float y = event.values[1];
-            float z = event.values[2];
-            long curTime = System.currentTimeMillis();
-
-            if((curTime - lasUpdateSave) > 500){
-                long diffTime = (curTime -lasUpdateSave);
-                lasUpdateSave = curTime;
-                float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
-                if(speed > SHOW_MOVE){
-                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
-                }else{
-                    snakLabel.setText("SOLID");
-                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorBlak));
-                }
-            }
-
-
-            if ((curTime - lastUpdate) > 100) {
-                long diffTime = (curTime - lastUpdate);
-                lastUpdate = curTime;
-
-                float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
-
-                /*
-                if(speed > SHAKE_THRESHOLD_HARD){
-                    snakLabel.setText("SHAKE PHONE HARD");
-                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
-                }else if (speed > SHAKE_THRESHOLD) {
-                    snakLabel.setText("SHAKE PHONE");
-                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorEstrellaAct));
-                }else if(speed > SHOW_MOVE){
-                    viewBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
-                }else{
-                    snakLabel.setText("SOLID");
-                    viewBack.setBackgroundColor(getResources().getColor(R.color.ELCColorBlak));
-                }
-                */
-
-                last_x = x;
-                last_y = y;
-                last_z = z;
-            }
-            ace_label.setText("x:"+last_x+" \ny:"+last_y+"\nz:"+last_z);
-        }
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
-
-    protected void onPause() {
-        super.onPause();
-        senSensorManager.unregisterListener(this);
-    }
-    protected void onResume() {
-        super.onResume();
-        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     // onClick Event
@@ -392,8 +309,8 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
                                 secuencia_saveLine += 1;
                             }
                             text_velocidad.setText(""+MAGPSManager.calcularVelocidad());
-                            velocidadTrackSave(MAGPSManager.addspeed);
-                            calulePromedioVelocidad(MAGPSManager.addspeed);
+                            //velocidadTrackSave(MAGPSManager.addspeed);
+                            //calulePromedioVelocidad(MAGPSManager.addspeed);
                             moveCamaraMaps();
                             if(limit_saveServer == secuencia_saveServer){
 
@@ -434,6 +351,9 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         dataSource.saveElementTrack(track_id, ManagerSQLite.ColumnRoutesTrack.TIME_TOTAL, timerDuracion, false);
         dataSource.saveElementTrack(track_id, ManagerSQLite.ColumnRoutesTrack.PROMEDIO_VELOCITY, promdeioVel, false);
     }
+    public void SaveMoveData(){
+
+    }
 
     public void calulePromedioVelocidad(float velocidad){
         plus_promedio_Track += velocidad;
@@ -459,9 +379,16 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     }
 
     public void saveLineBD(){
+        /*
         Log.d("LOGMA", "PASE:"+MAGPSManager.useLocation);
-        id_last_location = this.dataSource.addNewPoint(track_id, MAGPSManager.useLocation, duracion);
-        Log.d("LOGMA", "PASE");
+        if(MAGPSManager.useLocation != null){
+            id_last_location = this.dataSource.addNewPoint(track_id, MAGPSManager.useLocation, duracion);
+            String move_point = "x:"+last_x+",y:"+last_y+",z:"+last_z;
+            //Log.d("LOGMA", "MOVE:"+move_point);
+            String GPS_point = ""+MAGPSManager.useLocation.getLatitude()+","+MAGPSManager.useLocation.getLongitude();
+            id_last_move = this.dataSource.addNewPointMove(track_id, id_last_location,  move_point, GPS_point, duracion);
+        }
+        */
     }
 
     public void  moveCamaraMaps(){

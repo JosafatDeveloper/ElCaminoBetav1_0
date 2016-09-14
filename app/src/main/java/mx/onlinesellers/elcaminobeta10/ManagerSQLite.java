@@ -22,7 +22,7 @@ public class ManagerSQLite {
     public static final String ROUTE_TRACK_TABLE_NAME = "routes_track";
     public static final String ROUTE_TRACK_CONFIG_TABLE_NAME = "routes_track_config";
     public static final String ROUTE_TRACK_POINT_TABLE_NAME = "routes_track_points";
-    public static final String ROUTE_TRACK_POINT_MOVE_TABLE_NAME = "point_move";
+    public static final String ROUTE_TRACK_POINT_MOVE_TABLE_NAME = "point_moves";
     public static final String STRING_TYPE = "text";
     public static final String INT_TYPE = "integer";
     public static final String DATETIME_TYPE = "datetime";
@@ -86,6 +86,14 @@ public class ManagerSQLite {
         public static final String GPS_ALTITUDE = "gps_altitude";
         public static final String TIMER_CHECK = "timer_check";
         public static final String CHECK_DATETIME = "check_datetime";
+    }
+    public static class ColumnPointMoveAce{
+        public static final String ID_MOVE = BaseColumns._ID;
+        public static final String ID_TRACK = "id_track";
+        public static final String ID_POINT = "id_point";
+        public static final String MOVE_POINT = "move_point";
+        public static final String GPS_POINT = "gps_point";
+        public static final String TIMER_CHECK = "timer_check";
     }
 
     public static class ParamterosDataUser{
@@ -167,6 +175,15 @@ public class ManagerSQLite {
                     ColumnRoutesTrackPoint.TIMER_CHECK+" "+INT_TYPE+" not null,"+
                     ColumnRoutesTrackPoint.CHECK_DATETIME+" "+DATETIME_TYPE+" not null)";
 
+    public static final String CREATE_MOVE_ACELE_POINT_SCRIPT =
+            "create table "+ROUTE_TRACK_POINT_MOVE_TABLE_NAME+"("+
+                    ColumnPointMoveAce.ID_MOVE+" "+INT_TYPE+" primary key autoincrement,"+
+                    ColumnPointMoveAce.ID_POINT+" "+INT_TYPE+" not null,"+
+                    ColumnPointMoveAce.ID_TRACK+" "+INT_TYPE+" not null,"+
+                    ColumnPointMoveAce.MOVE_POINT+" "+STRING_TYPE+" not null,"+
+                    ColumnPointMoveAce.GPS_POINT+" "+STRING_TYPE+" not null,"+
+                    ColumnPointMoveAce.TIMER_CHECK+" "+DOUBLE_TYPE+" not null)";
+
     public static final String CREATE_ROUTE_TRACK_CONFIG_SCRIPT =
             "create table "+ROUTE_TRACK_CONFIG_TABLE_NAME+"("+
                     ColumnRoutesTrackConfig.ID_CONFIG+" "+INT_TYPE+" primary key autoincrement,"+
@@ -241,6 +258,7 @@ public class ManagerSQLite {
         //Insertando en la base de datos
         database.insert(ROUTES_TABLE_NAME,null,values);
     }
+
 
     public Cursor getALLUserData(){
         return database.rawQuery("select * from "+USER_DATA_TABLE_NAME, null);
@@ -377,6 +395,16 @@ public class ManagerSQLite {
         values.put(ColumnRoutesTrackPoint.CHECK_DATETIME,date);
         int id_point = (int) database.insert(ROUTE_TRACK_POINT_TABLE_NAME,null,values);
         return id_point;
+    }
+    public int addNewPointMove(int id_track, int id_point, String MOVE_point, String GPS_Log, double timer_check){
+        ContentValues values = new ContentValues();
+        values.put(ColumnPointMoveAce.ID_TRACK, id_track);
+        values.put(ColumnPointMoveAce.ID_POINT, id_point);
+        values.put(ColumnPointMoveAce.MOVE_POINT, MOVE_point);
+        values.put(ColumnPointMoveAce.GPS_POINT, GPS_Log);
+        values.put(ColumnPointMoveAce.TIMER_CHECK, timer_check);
+        int id_return = (int) database.insert(ROUTE_TRACK_POINT_MOVE_TABLE_NAME,null,values);
+        return id_return;
     }
 
     // Save Track ALL

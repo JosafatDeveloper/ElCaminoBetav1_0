@@ -188,8 +188,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Licencia: 121202984839492"
-                android:id="@+id/textView13"
+                android:id="@+id/giroscopeLabel"
                 android:layout_below="@+id/barraactivity"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -201,9 +200,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sangre: O+"
-                android:id="@+id/textView14"
-                android:layout_below="@+id/textView13"
+                android:id="@+id/accelerometroLabel"
+                android:layout_below="@+id/giroscopeLabel"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textSize="18dp"
@@ -214,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:text="IMSS: 92765324274783"
                 android:id="@+id/textView15"
-                android:layout_below="@+id/textView14"
+                android:layout_below="@+id/accelerometroLabel"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textSize="18dp"
@@ -283,29 +281,6 @@
                     android:lines="1" />
 
             </RelativeLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="G:"
-                android:id="@+id/girp01"
-                android:textColor="@color/ELCColorWhite"
-                android:textAlignment="viewStart"
-                android:textSize="18dp"
-                android:layout_below="@+id/textView12"
-                android:layout_toRightOf="@+id/imageView3"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snak"
-                android:id="@+id/snakLabel"
-                android:layout_below="@+id/girp01"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
     </ScrollView>

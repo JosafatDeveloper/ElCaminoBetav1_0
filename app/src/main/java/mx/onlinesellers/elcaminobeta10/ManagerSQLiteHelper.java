@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class ManagerSQLiteHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "ELCBD.db";
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 4;
 
     public ManagerSQLiteHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -25,12 +25,14 @@ public class ManagerSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(ManagerSQLite.CREATE_ROUTE_TRACK_CONFIG_SCRIPT);
         db.execSQL(ManagerSQLite.CREATE_USER_DATA_SCRIPT);
         db.execSQL(ManagerSQLite.INSERT_QUOTES_USER_DATA_SCRIPT_1_0);
+        db.execSQL(ManagerSQLite.CREATE_MOVE_ACELE_POINT_SCRIPT);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(ManagerSQLite.CREATE_USER_DATA_SCRIPT);
-        db.execSQL(ManagerSQLite.INSERT_QUOTES_USER_DATA_SCRIPT_1_0);
+        //db.execSQL(ManagerSQLite.CREATE_USER_DATA_SCRIPT);
+        //db.execSQL(ManagerSQLite.INSERT_QUOTES_USER_DATA_SCRIPT_1_0);
+        //db.execSQL(ManagerSQLite.CREATE_MOVE_ACELE_POINT_SCRIPT);
         //db.execSQL("ALTER TABLE routes_track_points RENAME TO routes_track_point");
         //db.execSQL("DROP TABLE routes_tracks");
         //db.execSQL(ManagerSQLite.CREATE_ROUTE_TRACK_SCRIPT);

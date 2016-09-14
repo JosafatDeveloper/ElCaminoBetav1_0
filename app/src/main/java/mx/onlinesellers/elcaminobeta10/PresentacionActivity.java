@@ -15,7 +15,7 @@ public class PresentacionActivity extends AppCompatActivity {
 
     // Demo Run
     public void onClickNext(View view){
-        Intent intent = new Intent(PresentacionActivity.this, UserLoginActivity.class);
+        Intent intent = new Intent(PresentacionActivity.this, HomeActivity.class);
         startActivity(intent);
     }
     public void onClickNext2(View view){

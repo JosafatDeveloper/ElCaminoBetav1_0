@@ -14,6 +14,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.security.Key;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,9 +26,9 @@ public class ELCSENSORS extends Service implements SensorEventListener{
     // Sensor
     private final SensorManager mSensorManager;
     private final Sensor mAccelerometer;
-    private final Sensor mGiroscope;
-    private float[] giroscopeData;
-    private float[] accelerometerData;
+    //private final Sensor mGiroscope;
+    private List<Float> giroscopeData;
+    private float accelerometerData[];
 
     private TextView labelG;
     private TextView labelA;
@@ -38,14 +39,15 @@ public class ELCSENSORS extends Service implements SensorEventListener{
         this.ctx = this.getApplicationContext();
         mSensorManager = (SensorManager)this.ctx.getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mGiroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        //mGiroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
     public ELCSENSORS(Context c){
         super();
         this.ctx = c;
         mSensorManager = (SensorManager)this.ctx.getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mGiroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        //mGiroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        accelerometerData = new float[3];
     }
 
     @Nullable
@@ -57,7 +59,7 @@ public class ELCSENSORS extends Service implements SensorEventListener{
     // Inicializador
     public void startSensor() {
         mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mGiroscope, SensorManager.SENSOR_DELAY_NORMAL);
+        //mSensorManager.registerListener(this, mGiroscope, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     public void resumeSensor() {
@@ -76,12 +78,10 @@ public class ELCSENSORS extends Service implements SensorEventListener{
             float x = event.values[0];
             float y = event.values[1];
             float z = event.values[2];
-            /*
-            giroscopeData[0] = x;
-            giroscopeData[1] = y;
-            giroscopeData[2] = z;
-            */
-            labelA.setText("T_ACC x:"+x+" y:"+y+" z:"+z);
+            accelerometerData[0] = x;
+            accelerometerData[1] = y;
+            accelerometerData[2] = z;
+            labelA.setText("T_Ro x:"+x+" y:"+y+" z:"+z);
             //Log.i("LOG", "TYPE_ACCELEROMETER x:"+x+" y:"+y+" z:"+z);
         }
         if (sensorActivity.getType() == Sensor.TYPE_GYROSCOPE){
@@ -106,5 +106,9 @@ public class ELCSENSORS extends Service implements SensorEventListener{
     public void LogLabel(TextView gLabel, TextView aLabel){
         labelA = aLabel;
         labelG = gLabel;
+    }
+
+    public float[] getAccelerometerData(){
+        return accelerometerData;
     }
 }

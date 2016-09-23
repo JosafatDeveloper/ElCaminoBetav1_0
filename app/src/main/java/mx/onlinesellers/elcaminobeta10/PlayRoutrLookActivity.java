@@ -24,9 +24,12 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.google.android.gms.maps.model.LatLng;
+
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCAPIServer;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCFunciones;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCGPS;
 import mx.onlinesellers.elcaminobeta10.ELCEXTRAS.ELCSENSORS;
@@ -41,6 +44,8 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     public TextView acti_titulo;
     public TextView acti_describe;
 
+    public TextView id_tracktextview;
+
     public RelativeLayout viewBack;
 
     // SENSORES
@@ -53,7 +58,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     public int secuencia_saveLine = 0;
     public int secuencia_saveServer = 0;
     public int limit_saveline = 4;
-    public int limit_saveServer = 10;
+    public int limit_saveServer = 1;
     public int distancia_limit_track = 1;
     public Location[] locations;
     public LatLng locationLast;
@@ -67,6 +72,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
     ELCFunciones elcFunciones;
     ELCGPS MAGPSManager;
     ELCSENSORS ELCSENSORSManager;
+    ELCAPIServer ELCAPIServerManager;
 
     public int track_id;
     public int track_config_id;
@@ -101,6 +107,8 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         acti_sA_btn = (Button) findViewById(R.id.look_btn_a);
         acti_sB_btn = (Button) findViewById(R.id.look_btn_b);
         acti_sC_btn = (Button) findViewById(R.id.look_btn_c);
+
+        id_tracktextview = (TextView) findViewById(R.id.id_routeddd);
 
         viewBack = (RelativeLayout) findViewById(R.id.viewBack);
 
@@ -219,6 +227,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
         ELCSENSORSManager = new ELCSENSORS(getApplicationContext());
         ELCSENSORSManager.LogLabel(giro_label, acce_label);
         ELCSENSORSManager.startSensor();
+        ELCAPIServerManager = new ELCAPIServer(getApplicationContext(), this);
 
 
     }
@@ -313,9 +322,10 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
                             //calulePromedioVelocidad(MAGPSManager.addspeed);
                             moveCamaraMaps();
                             if(limit_saveServer == secuencia_saveServer){
-
+                                secuencia_saveServer = 0;
+                                saveAcelerometro();
                             }else{
-
+                                secuencia_saveServer += 1;
                             }
                         }
                     });
@@ -380,8 +390,7 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
 
     public void saveLineBD(){
         /*
-        Log.d("LOGMA", "PASE:"+MAGPSManager.useLocation);
-        if(MAGPSManager.useLocation != null){
+        if(MAGPSManager.loca != null){
             id_last_location = this.dataSource.addNewPoint(track_id, MAGPSManager.useLocation, duracion);
             String move_point = "x:"+last_x+",y:"+last_y+",z:"+last_z;
             //Log.d("LOGMA", "MOVE:"+move_point);
@@ -389,6 +398,13 @@ public class PlayRoutrLookActivity extends AppCompatActivity implements View.OnC
             id_last_move = this.dataSource.addNewPointMove(track_id, id_last_location,  move_point, GPS_point, duracion);
         }
         */
+
+    }
+
+    public void saveAcelerometro(){
+        id_tracktextview.setText("ID:"+track_id);
+        float sendSave[] = ELCSENSORSManager.getAccelerometerData();
+        ELCAPIServerManager._save_acelerometro(new Float(sendSave[0]), new Float(sendSave[1]), new Float(sendSave[2]), ""+track_id);
     }
 
     public void  moveCamaraMaps(){

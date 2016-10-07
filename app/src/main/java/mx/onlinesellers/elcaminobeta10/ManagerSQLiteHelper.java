@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class ManagerSQLiteHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "ELCBD.db";
-    public static final int DATABASE_VERSION = 4;
+    public static final int DATABASE_VERSION = 22;
 
     public ManagerSQLiteHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
